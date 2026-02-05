@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quiz Upload</title>
+
+      <style>
+      body {
+        background: #f5f7fb;
+      }
+      .section-title {
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #333;
+      }
+      .question-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        border-left: 5px solid #0d6efd;
+      }
+      .quiz-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .quiz-type {
+        background: #e7f0ff;
+        color: #0d6efd;
+        font-size: 0.85rem;
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-weight: 600;
+      }
+      .answers-list li {
+        list-style: none;
+        margin-bottom: 4px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        background: #f1f3f9;
+      }
+      .answers-list li.correct {
+        background: #d4edda;
+        color: #155724;
+        font-weight: 600;
+        border-left: 4px solid #28a745;
+      }
+      .add-answer {
+        color: #0d6efd;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    </style>
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/traineruploadquiz.css" />
+  </head>
+  <body>
+    <!-- ✅ SIDEBAR -->
+    <div class="sidebar">
+      <div class="brand">
+        <i class="fa-solid fa-user"></i>
+        <span> Trainer</span>
+      </div>
+      <nav class="nav flex-column">
+        <a
+          class="nav-link active"
+          href="./instructor.html"
+          data-title="Dashboard"
+        >
+          <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./instructorprofile.html"
+          data-title="My Profile"
+        >
+          <i class="fa-solid fa-user-check me-1"></i> <span>My Profile</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./instructorsactivecourse.html"
+          data-title="Assigned Courses"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Assigned Courses</span>
+        </a>
+
+        <a
+          class="nav-link"
+          href="./instructoractivebatch.html"
+          data-title="Active Batch"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Active Batch</span>
+        </a>
+
+        <a
+          class="nav-link"
+          href="./upcomingliveclass.html"
+          data-title="Upcoming Live Classes"
+        >
+          <i class="fa-brands fa-youtube me-1"></i
+          ><span>Upcoming Live Classes</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./uploadedvideos.html"
+          data-title="Uploaded Videos"
+        >
+          <i class="fa-solid fa-cloud-arrow-up me-1"></i
+          ><span>Uploaded Videos</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./instructornotification.html"
+          data-title="Notifications"
+        >
+          <i class="fa-solid fa-bell me-1"></i><span>Notifications</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./skillspacetrainer.html"
+          data-title="SkillSpace"
+        >
+          <i class="fa-solid fa-briefcase"></i><span>SkillSpace</span>
+        </a>
+        <a class="nav-link" href="#" data-title="Community Quarry">
+          <i class="fa-solid fa-comments me-1"></i><span>Community Quarry</span>
+        </a>
+        <hr />
+        <div class="m-2">Account</div>
+        <a class="nav-link" href="./index.html" data-title="Logout">
+          <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
+        </a>
+        <a
+          class="nav-link"
+          href="https://www.skillwaala.com/contact-us"
+          data-title="Support"
+        >
+          <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
+        </a>
+      </nav>
+    </div>
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="sidebar-toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand fw-bold ms-2" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="130" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Courses</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./hirepage.html">Hire from us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Job Search</a>
+            </li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container-fluid p-3 p-md-4">
+        <div class="topbar">
+          <h6 class="mb-0 text-muted">Home / SkillSpace / Upload Quiz</h6>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <i class="bi bi-bell fs-5"></i>
+          </div>
+        </div>
+
+            <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3>Trainer Quiz Panel</h3>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#quizModal"
+        >
+          + Add New Quiz
+        </button>
+      </div>
+
+      <!-- Temporary Questions -->
+      <h5 class="section-title">📝 Questions Added (Not Published Yet)</h5>
+      <div id="postedQuestions" class="mt-3"></div>
+
+      <div class="text-end mb-5">
+        <button id="publishBtn" class="btn btn-success d-none">
+          ✅ Publish Quiz
+        </button>
+      </div>
+
+      <!-- Published Quizzes -->
+      <h5 class="section-title">📚 Published Quizzes</h5>
+      <div id="publishedList"></div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="quizModal"
+      tabindex="-1"
+      aria-labelledby="quizModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="quizModalLabel">Add Question</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <select id="quizType" class="form-control mb-2">
+                <option value="">--Select Quiz Type--</option>
+                <option>Course Quiz</option>
+                <option>Knowledge Quiz</option>
+                <option>GK Quiz</option>
+                <option>How to Decide</option>
+              </select>
+
+              <select id="quizType" class="form-control mb-2">
+                <option value="">--Select Course Type--</option>
+                <option>Web Development</option>
+                <option>Content Writing</option>
+                <option>Animation</option>
+                <option>Digital Marketing</option>
+              </select>
+
+              <textarea
+                id="questionInput"
+                placeholder="Enter your question..."
+                class="form-control"
+              ></textarea>
+
+              <div class="answers-list mt-3" id="answersList">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-2"
+                >
+                  <div class="d-flex align-items-center w-100 gap-2">
+                    <input type="radio" name="correctOption" />
+                    <input
+                      type="text"
+                      placeholder="Answer 1"
+                      class="form-control"
+                    />
+                  </div>
+                  <i class="bi bi-trash3 text-danger delete-answer"></i>
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-2"
+                >
+                  <div class="d-flex align-items-center w-100 gap-2">
+                    <input type="radio" name="correctOption" />
+                    <input
+                      type="text"
+                      placeholder="Answer 2"
+                      class="form-control"
+                    />
+                  </div>
+                  <i class="bi bi-trash3 text-danger delete-answer"></i>
+                </div>
+              </div>
+
+              <div class="add-answer" id="addAnswer">+ Add Answer</div>
+              <small class="text-muted d-block mt-2"
+                >Select one correct answer by clicking radio button</small
+              >
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button class="btn btn-primary" id="addQuestionBtn">
+              Add Question
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+    </main>
+
+         <!-- Footer -->
+      <footer>
+        <div class="container-fluid py-5">
+          <div class="row g-4 footer-main">
+            <!-- First Column -->
+            <div class="col-lg-3 col-md-12 footer-logo">
+              <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+
+              <p class="m-2"></p>
+              <p><strong>Social Links:</strong></p>
+              <a href="https://www.facebook.com/skillwaala/"
+                ><i
+                  class="bi bi-facebook bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+              |
+              <a href="https://www.instagram.com/skillwaala"
+                ><i
+                  class="bi bi-instagram bg-danger px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+              |
+              <a href="https://www.linkedin.com/company/skillwaala/"
+                ><i
+                  class="bi bi-linkedin bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+              |
+              <a
+                href="https://api.whatsapp.com/send/?phone=917766967799&text=Hello+SkillWaala+Team&type=phone_number&app_absent"
+                ><i
+                  class="bi bi-whatsapp bg-success px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+
+              <p><strong>Email:</strong>hro@skillwaala.com</p>
+              <p>
+                <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+                Scheme, Triveni Nagar Jaipur, 302018
+              </p>
+              <p><strong>Contact:</strong>+91 7766967799</p>
+            </div>
+
+            <!-- Second Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li>
+                  <a href="https://www.skillwaala.com/about-us">About Us</a>
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </li>
+                <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+                <li>
+                  <a href="https://www.skillwaala.com/privacy-policy"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Third Column -->
+            <div class="col-lg-4 col-md-12 footer-column">
+              <h3>Trending Courses</h3>
+              <div class="row g-3">
+                <div class="col-6">
+                  <ul>
+                    <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                    <li>
+                      <a href="./contentwriting.html">Content Writing </a>
+                    </li>
+                    <li><a href="./seo.html">SEO Course </a></li>
+                    <li>
+                      <a href="./socialmediamarketing.html"
+                        >Social Media Marketing
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./webbatch.html">Full-Stack Web Development </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-6">
+                  <ul>
+                    <li>
+                      <a href="./performancemarketing.html"
+                        >Performance Marketing
+                      </a>
+                    </li>
+                    <li><a href="./englishcourse.html">English Spoken </a></li>
+                    <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                    <li><a href="./videoediting.html">Video Editing </a></li>
+                    <li><a href="./2danimation.html">2D Animation </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fourth Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Training Program</h3>
+              <ul>
+                <li><a href="./hirepage.html">Digital Marketing </a></li>
+                <li><a href="./hirepage.html">Content Writing </a></li>
+                <li><a href="./hirepage.html">Animation </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+          <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-contacts">
+          <p>Business No: +91 7766967799</p>
+          <p>Email: hro@skillwaala.com</p>
+        </div>
+      </footer>
+
+   
+    <!-- ✅ JS -->
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const toggleBtn = document.querySelector(".sidebar-toggle-btn");
+      const navLinks = document.querySelectorAll(".sidebar .nav-link");
+
+      // Sidebar toggle for desktop + mobile
+      toggleBtn.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          sidebar.classList.toggle("show");
+        } else {
+          sidebar.classList.toggle("collapsed");
+        }
+      });
+
+      // ✅ Auto set active link based on URL
+      const currentLocation = window.location.href;
+      navLinks.forEach((link) => {
+        if (link.href === currentLocation) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const addAnswerBtn = document.getElementById("addAnswer");
+      const answersList = document.getElementById("answersList");
+      const addQuestionBtn = document.getElementById("addQuestionBtn");
+      const questionInput = document.getElementById("questionInput");
+      const postedQuestions = document.getElementById("postedQuestions");
+      const quizTypeInput = document.getElementById("quizType");
+      const quizModal = new bootstrap.Modal(document.getElementById("quizModal"));
+      const publishBtn = document.getElementById("publishBtn");
+      const publishedList = document.getElementById("publishedList");
+
+      let tempQuestions = [];
+      let publishedQuizzes = [];
+
+      // ➕ Add new answer
+      addAnswerBtn.addEventListener("click", () => {
+        const div = document.createElement("div");
+        div.classList.add(
+          "d-flex",
+          "align-items-center",
+          "justify-content-between",
+          "mb-2"
+        );
+        div.innerHTML = `
+          <div class="d-flex align-items-center w-100 gap-2">
+            <input type="radio" name="correctOption" />
+            <input type="text" placeholder="Answer ${
+              answersList.children.length + 1
+            }" class="form-control" />
+          </div>
+          <i class="bi bi-trash3 text-danger delete-answer"></i>`;
+        answersList.appendChild(div);
+      });
+
+      // 🗑️ Delete answer
+      answersList.addEventListener("click", (e) => {
+        if (e.target.classList.contains("delete-answer")) {
+          e.target.parentElement.remove();
+        }
+      });
+
+      // ➕ Add Question
+      addQuestionBtn.addEventListener("click", () => {
+        const question = questionInput.value.trim();
+        const quizType = quizTypeInput.value.trim();
+        const answerInputs = [...answersList.querySelectorAll("input[type='text']")];
+        const correctIndex = [...answersList.querySelectorAll("input[type='radio']")].findIndex(
+          (r) => r.checked
+        );
+
+        const answers = answerInputs.map((a) => a.value.trim()).filter((a) => a !== "");
+
+        if (!quizType) return alert("Select quiz type!");
+        if (!question) return alert("Enter question!");
+        if (answers.length === 0) return alert("Add at least one answer!");
+        if (correctIndex === -1) return alert("Select one correct answer!");
+
+        tempQuestions.push({
+          quizType,
+          question,
+          answers,
+          correctIndex,
+        });
+
+        displayTempQuestions();
+        publishBtn.classList.remove("d-none");
+
+        // Reset
+        questionInput.value = "";
+        quizTypeInput.value = "";
+        answersList.innerHTML = `
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="d-flex align-items-center w-100 gap-2">
+              <input type="radio" name="correctOption" />
+              <input type="text" placeholder="Answer 1" class="form-control" />
+            </div>
+            <i class="bi bi-trash3 text-danger delete-answer"></i>
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="d-flex align-items-center w-100 gap-2">
+              <input type="radio" name="correctOption" />
+              <input type="text" placeholder="Answer 2" class="form-control" />
+            </div>
+            <i class="bi bi-trash3 text-danger delete-answer"></i>
+          </div>`;
+        quizModal.hide();
+      });
+
+      // 🖼️ Display temporary questions
+      function displayTempQuestions() {
+        postedQuestions.innerHTML = tempQuestions
+          .map(
+            (q, i) => `
+          <div class="question-card">
+            <div class="quiz-header">
+              <span class="quiz-type">${q.quizType}</span>
+              <small>#${i + 1}</small>
+            </div>
+            <div class="fw-bold mt-2">❓ ${q.question}</div>
+            <ul class="answers-list">
+              ${q.answers
+                .map(
+                  (a, idx) =>
+                    `<li ${
+                      idx === q.correctIndex
+                        ? 'class="correct"'
+                        : ""
+                    }>${a} ${
+                      idx === q.correctIndex
+                        ? "✅ (Correct Answer)"
+                        : ""
+                    }</li>`
+                )
+                .join("")}
+            </ul>
+            <div class="text-end">
+              <button class="btn btn-sm btn-outline-danger" onclick="deleteTemp(${i})">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </div>
+          </div>`
+          )
+          .join("");
+      }
+
+      function deleteTemp(index) {
+        tempQuestions.splice(index, 1);
+        if (tempQuestions.length === 0) publishBtn.classList.add("d-none");
+        displayTempQuestions();
+      }
+
+      // ✅ Publish all questions
+      publishBtn.addEventListener("click", () => {
+        if (tempQuestions.length === 0) return alert("No questions added!");
+
+        const type = tempQuestions[0].quizType;
+        const quizGroup = tempQuestions.filter((q) => q.quizType === type);
+        publishedQuizzes.push({ quizType: type, questions: quizGroup });
+
+        displayPublished();
+        tempQuestions = [];
+        postedQuestions.innerHTML = "";
+        publishBtn.classList.add("d-none");
+      });
+
+      // 🎯 Show published quizzes
+      function displayPublished() {
+        publishedList.innerHTML = publishedQuizzes
+          .map(
+            (quiz, i) => `
+          <div class="question-card border-success">
+            <div class="quiz-header">
+              <h6 class="quiz-type">${quiz.quizType}</h6>
+              <div>
+                <button class="btn btn-sm btn-outline-primary me-1" onclick="editQuiz(${i})"><i class="bi bi-pencil"></i></button>
+                <button class="btn btn-sm btn-outline-danger" onclick="deletePublished(${i})"><i class="bi bi-trash"></i></button>
+              </div>
+            </div>
+            ${quiz.questions
+              .map(
+                (q, idx) => `
+              <div class="mt-2">
+                <b>Q${idx + 1}:</b> ${q.question}
+                <ul class="answers-list mt-1">
+                  ${q.answers
+                    .map(
+                      (a, aIndex) =>
+                        `<li ${
+                          aIndex === q.correctIndex ? 'class="correct"' : ""
+                        }>${a}${
+                          aIndex === q.correctIndex
+                            ? " ✅ (Correct Answer)"
+                            : ""
+                        }</li>`
+                    )
+                    .join("")}
+                </ul>
+              </div>`
+              )
+              .join("")}
+          </div>`
+          )
+          .join("");
+      }
+
+      // 🗑️ Delete published quiz
+      function deletePublished(index) {
+        if (confirm("Delete this published quiz?")) {
+          publishedQuizzes.splice(index, 1);
+          displayPublished();
+        }
+      }
+
+      // ✏️ Edit published quiz
+      function editQuiz(index) {
+        const quiz = publishedQuizzes[index];
+        alert(`Edit feature coming soon for: ${quiz.quizType}`);
+      }
+    </script>
+  </body>
+</html>

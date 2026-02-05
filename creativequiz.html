@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Quiz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .navbar {
+        background: #fff;
+        padding: 10px 25px;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .custom-nav {
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        padding: 2px 10px;
+        margin: 2px;
+      }
+
+      .custom-nav .nav-link {
+        font-weight: 500;
+        color: #333;
+        padding: 6px 12px;
+      }
+
+      .custom-nav .nav-link:hover {
+        color: #f26434;
+      }
+
+      .custom-nav .divider {
+        color: #f26434;
+        font-size: 20px;
+        margin: 0 6px;
+      }
+
+      .btn-login {
+        border: 1px solid #f36f45;
+        color: #f36f45;
+        border-radius: 10px;
+        padding: 6px 18px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .btn-login:hover {
+        background: #f36f45;
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        .custom-nav {
+          border: none;
+          border-radius: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 0;
+        }
+
+        .custom-nav .divider {
+          display: none;
+        }
+
+        .custom-nav .nav-link {
+          padding: 10px;
+          width: 100%;
+          border-bottom: 1px solid #eee;
+        }
+
+        .btn-login {
+          margin-top: 10px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      footer {
+        background: #fff5ef;
+        color: #333;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .footer-logo img {
+        width: 200px;
+        margin-bottom: 10px;
+      }
+
+      .footer-logo p {
+        font-size: 14px;
+        margin: 4px 0;
+        color: #444;
+      }
+
+      .footer-logo a {
+        color: #e65a29;
+        text-decoration: none;
+        margin: 0 4px;
+        font-size: 14px;
+      }
+
+      .footer-logo a:hover {
+        color: #ff5722;
+      }
+
+      .footer-column h3 {
+        background: #f6d5c4;
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        background: #ffe9e1;
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .footer-column ul li {
+        margin: 8px 0;
+      }
+
+      .footer-column ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .footer-column ul li a:hover {
+        color: #ff5722;
+      }
+
+      .footer-bottom {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 30px;
+        width: 100%;
+      }
+
+      .footer-contacts {
+        background: #ff5722;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      .footer-contacts p {
+        margin: 0;
+      }
+
+      .register-section {
+        background: linear-gradient(135deg, #5c2dab, #7d4ed1);
+        color: #fff;
+        border-radius: 15px;
+        text-align: center;
+        padding: 40px 20px;
+        margin: 30px auto;
+        max-width: 1000px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .register-section h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .register-section p {
+        font-size: 16px;
+        margin-bottom: 25px;
+      }
+
+      .register-section .btn {
+        background: linear-gradient(90deg, #ff6600, #ff0000);
+        border: none;
+        padding: 12px 30px;
+        font-size: 18px;
+        border-radius: 8px;
+        color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      .register-section .btn:hover {
+        opacity: 0.85;
+      }
+
+      .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40vh;
+        padding: 30px 15px;
+        background-color: #d7e3ff;
+      }
+
+      .hero-card {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        padding: 60px 40px;
+        max-width: 1100px;
+        width: 100%;
+        background-image: radial-gradient(#d7e3ff 1px, transparent 1px);
+        background-size: 40px 40px;
+        position: relative;
+      }
+
+      .hero-card h1 {
+        font-weight: 700;
+        color: #111;
+        font-size: 2.5rem;
+      }
+
+      .hero-card h2 {
+        font-weight: 500;
+        color: #555;
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+      }
+
+      .hero-card p {
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 35px;
+        line-height: 1.6;
+      }
+
+      /* Right Image */
+      .hero-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .learingtext {
+        color: #f36f45;
+      }
+
+      .btn-learn {
+        background: linear-gradient(to right, #ff3b3b, #ff6600);
+        color: white;
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 12px 24px;
+        border: none;
+        transition: all 0.3s;
+      }
+
+      .btn-learn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 80, 0, 0.4);
+      }
+
+      .btn-outline {
+        border: none;
+        background: rgba(0, 0, 0, 0.09);
+        color: #555;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: all 0.3s;
+      }
+
+      .btn-outline:hover {
+        color: #111;
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      .quiz-section {
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .quiz-container {
+        /* background: #fff; */
+        border-radius: 15px;
+        box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.08);
+        padding: 50px;
+        max-width: 1100px;
+        width: 100%;
+        background-color: #f8fafd;
+      }
+
+      .quiz-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .quiz-header h2 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #222;
+      }
+
+      .quiz-header i {
+        font-size: 2.2rem;
+        color: #111;
+      }
+
+      .quiz-container p {
+        color: #555;
+        font-size: 1rem;
+        margin: 10px 0 30px;
+      }
+
+      .quiz-info {
+        border: 1px solid #ccc;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 25px;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+      }
+
+      .quiz-info div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #444;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      .quiz-info span {
+        background-color: #444;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 15px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .btn-start {
+        background: linear-gradient(to right, #ff6600, #ff0000);
+        color: #fff;
+        font-weight: 600;
+        padding: 10px 100px;
+        border: none;
+
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(255, 80, 0, 0.3);
+      }
+
+      .btn-start:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(255, 80, 0, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        .quiz-container {
+          padding: 35px 25px;
+        }
+
+        .quiz-header h2 {
+          font-size: 1.5rem;
+        }
+
+        .quiz-info {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 20px;
+        }
+
+        .quiz-info div {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .btn-start {
+          width: 100%;
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .quiz-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .quiz-header i {
+          margin-top: 10px;
+        }
+      }
+
+      .benefits-section {
+        background: linear-gradient(to bottom, #ffffff, #eef7ff);
+        border-radius: 10px;
+        padding: 40px 30px;
+        max-width: 1100px;
+        margin: 60px auto;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .benefits-section h3 {
+        font-weight: 700;
+        color: #222;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+
+      .benefit-item {
+        margin-bottom: 25px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .benefit-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 10px;
+        height: 10px;
+        background-color: #ff7b00; /* orange color dot */
+        border-radius: 50%;
+      }
+
+      .benefit-title {
+        font-weight: 600;
+        color: #222;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+      }
+
+      .benefit-item p {
+        color: #555;
+        font-size: 0.95rem;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .benefit-divider {
+        width: 100%;
+        height: 1px;
+        background-color: #e0e0e0;
+        margin: 15px 0;
+      }
+
+      @media (max-width: 768px) {
+        .benefits-section {
+          padding: 30px 20px;
+        }
+
+        .benefits-section h3 {
+          font-size: 1.3rem;
+        }
+
+        .benefit-item p {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .benefit-title {
+          font-size: 1rem;
+        }
+        .benefit-item p {
+          font-size: 0.85rem;
+        }
+      }
+
+      .courses-section {
+        padding: 60px 0;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(to bottom, #fde7e7, #ff5722);
+        font-family: "Poppins", sans-serif;
+      }
+
+      .courses-section h2 {
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .slider {
+        display: flex;
+        gap: 30px;
+        animation: scroll 15s linear infinite;
+      }
+
+      .slider:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .course-card {
+        flex: 0 0 300px;
+        border-radius: 15px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .course-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .course-img {
+        width: 100%;
+        height: 160px;
+        background: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg")
+          center/cover;
+        position: relative;
+      }
+
+      .live-tag {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #ff4500;
+        color: white;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .course-content {
+        padding: 15px;
+      }
+
+      .course-content h5 {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .course-content p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .facebook-btn {
+        background: #1877f2;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 5px;
+      }
+
+      .faq-section-2 {
+        padding: 80px 0;
+        background: #fff;
+      }
+
+      .faq-section-2 h2 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .faq-section-2 p {
+        text-align: center;
+        color: #555;
+        font-size: 15px;
+        margin-bottom: 40px;
+      }
+
+      .faq-box-2 {
+        max-width: 900px;
+        margin: auto;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        padding: 30px;
+      }
+
+      .accordion-item-2 {
+        border: none;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .accordion-item-2 .accordion-button {
+        font-weight: 500;
+        background: #fff;
+        border: none;
+        box-shadow: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .accordion-item-2 .accordion-button:not(.collapsed) {
+        background: #f4f6ff;
+        color: #2c3ebd;
+      }
+
+      .accordion-body-2 {
+        color: #555;
+        font-size: 15px;
+        background: #fff;
+        padding: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .slider {
+          animation: scroll 20s linear infinite;
+        }
+        .course-card {
+          flex: 0 0 240px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .course-card {
+          flex: 0 0 200px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .custom-card {
+          margin-bottom: 25px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-card {
+          padding: 40px 25px;
+        }
+
+        .hero-card h1 {
+          font-size: 1.9rem;
+        }
+
+        .hero-card h2 {
+          font-size: 1.1rem;
+        }
+
+        .hero-card p {
+          font-size: 0.95rem;
+        }
+
+        .btn-learn,
+        .btn-outline {
+          padding: 10px 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-card {
+          text-align: center;
+        }
+
+        .btn-group {
+          flex-direction: column;
+        }
+
+        .btn-group button {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="150" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
+            </li>
+            <span class="divider">|</span>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Course</a>
+            </li>
+
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hire from us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
+            <span class="divider">|</span>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="hero-card">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1>
+              Test Your <span class="learingtext"> Creative Mastery </span>
+            </h1>
+
+            <p>
+              Test your animation knowledge with SkillSpace’s animation quiz,
+              crafted by industry professionals to assess your skills in 2D, 3D,
+              motion graphics, character design, and game animation.
+            </p>
+            <div class="btn-group d-flex gap-3 flex-wrap">
+              <a href="./quiztest.html"
+                ><button class="btn-learn">Start Quiz</button></a
+              >
+              <a href="./course.html"
+                ><button class="btn-outline">Explore All Courses</button></a
+              >
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="col-lg-4 text-center mt-4 mt-lg-0">
+            <img
+              src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI="
+              alt="Learning Illustration"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz-section">
+      <div class="quiz-container">
+        <div class="quiz-header">
+          <h2>Creative Quiz</h2>
+          <i class="bi bi-lightbulb"></i>
+        </div>
+        <p>
+          So, what are you waiting for? Click the "Start Quiz" button and get
+          started!
+        </p>
+
+        <div class="quiz-info">
+          <div><span>31</span> Total Number of Questions</div>
+          <div><span>20 Min</span> Total Time for Questions</div>
+        </div>
+        <div class="text-end">
+          <a href="./quiztest.html"
+            ><button class="btn-start">Start Quiz</button></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section">
+      <h3>Benefits of Taking the SkillSpace Quiz</h3>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Identify Your Strengths</div>
+        <p>
+          This quiz helps you pinpoint which areas you naturally excel in. It
+          will help you plan your learning journey more strategically.
+        </p>
+        <div class="benefit-divider"></div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Bridge Knowledge Gaps</div>
+        <p>
+          Even if you have taken a course or worked in these fields, there are
+          always blind spots. The quiz reveals where your understanding can be
+          improved, helping you focus on the right upskilling areas.
+        </p>
+        <div class="benefit-divider"></div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Benchmark Against Industry Standards</div>
+        <p>
+          Each quiz question is designed to reflect real industry practices, not
+          textbook theory. By attempting the quiz, you will know how your skill
+          level compares with that of industry professionals.
+        </p>
+        <div class="benefit-divider"></div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Prepare for Job Interviews</div>
+        <p>
+          Many recruiters assess practical knowledge. The SkillSpace quiz lets
+          you rehearse interview-style questions, giving you an extra edge in
+          placements and internships.
+        </p>
+        <div class="benefit-divider"></div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Learn, Compete, and Grow</div>
+        <p>
+          With gamified learning elements, this quiz transforms traditional
+          testing into an engaging challenge. Compare your score with others,
+          climb the leaderboard, and enjoy the thrill of learning with
+          competition.
+        </p>
+      </div>
+    </section>
+
+    <section class="courses-section">
+      <div class="container">
+        <h2>Discover More Courses on Skillwaala</h2>
+        <div class="slider d-flex">
+          <a
+            href="./dmbatch.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Digital Marketing</h5>
+              <p>
+                Learn everything from SEO, Google Ads, and Social Media
+                Marketing to AI-powered marketing strategies.
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="./contentwriting.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Content Writing</h5>
+              <p>
+                Master the art of storytelling, brand voice, and persuasive
+                writing with hands-on content marketing tools and frameworks .
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="./animationbatch.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Animation Mastery Course</h5>
+              <p>
+                Bring your creativity to life with 2D Animation, motion
+                graphics, and video storytelling using industry-standard tools.
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="./webbatch.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Full-Stack Web Development Program</h5>
+              <p>
+                Go from beginner to pro with a complete roadmap covering HTML,
+                CSS, JavaScript, React, Node.js, and backend integration.
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="./englishcourse.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>English Speaking</h5>
+              <p>
+                Interactive lessons and quizzes that make English learning easy
+                and fun.
+              </p>
+            </div>
+          </a>
+
+          <!-- Duplicate cards for seamless scrolling -->
+          <a
+            href="./dmbatch.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Digital Marketing</h5>
+              <p>
+                Learn everything from SEO, Google Ads, and Social Media
+                Marketing to AI-powered marketing strategies.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--FAQ SECTION START -->
+    <section class="faq-section-2" id="faq2">
+      <div class="container">
+        <h2>FAQ (Frequently Asked Questions)</h2>
+
+        <div class="faq-box-2">
+          <div class="accordion" id="faqAccordion2">
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q1-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a1-2"
+                >
+                  Q1. What are these quizzes for?
+                </button>
+              </h2>
+              <div
+                id="a1-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. These quizzes are designed to help students and
+                  professionals test and enhance their digital skills through
+                  fun, gamified challenges
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q2-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a2-2"
+                >
+                  Q2. Are the SkillSpace quizzes free to attempt?
+                </button>
+              </h2>
+              <div
+                id="a2-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Yes, all quizzes are completely free to access. You can
+                  attempt them anytime, track your score, and even retake
+                  quizzes to improve your performance.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q3-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a3-2"
+                >
+                  Q3. Who should take these quizzes?
+                </button>
+              </h2>
+              <div
+                id="a3-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Skillspace quizzes are perfect for students, job seekers,
+                  freelancers, and working professionals who want to benchmark
+                  their skills in Digital Marketing, Content Writing, Animation,
+                  and Web Development.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q4-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a4-2"
+                >
+                  Q4. Will these quizzes help in career growth?
+                </button>
+              </h2>
+              <div
+                id="a4-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Yes, our quizzes are designed to help you identify
+                  strengths and weaknesses, guiding you toward the right
+                  Skillwaala courses and workshops to grow your career.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q5-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a5-2"
+                >
+                  Q5. Can I get a certificate after completing the quizzes?
+                </button>
+              </h2>
+              <div
+                id="a5-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Currently, SkillSpace quizzes focus on practical learning
+                  and assessment. Certificates are offered for Skillwaala’s main
+                  courses and workshops.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container py-5">
+        <div class="row g-4">
+          <!-- Register Box Section -->
+          <section class="register-section">
+            <h2>Skillwaala Free Training Program</h2>
+            <p>Kickstart your Career with Skillwaala.</p>
+            <a href="#" class="btn">Register Now</a>
+          </section>
+
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-6 footer-logo">
+            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+            <p><strong>Social Links:</strong></p>
+            <p>
+              <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+              <a href="#">LinkedIn</a> |
+              <a href="#">WhatsApp</a>
+            </p>
+            <p><strong>Email:</strong> info@skillwaala.com</p>
+            <p>
+              <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
+              Jaipur
+            </p>
+            <p><strong>Contact:</strong> +91 7705697799</p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-2 col-md-6 footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Web Stories</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-4 col-md-6 footer-column">
+            <h3>Trending Courses</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <ul>
+                  <li><a href="#">Digital Marketing</a></li>
+                  <li><a href="#">SEO Course</a></li>
+                  <li><a href="#">Social Media Marketing</a></li>
+                  <li><a href="#">Performance Marketing</a></li>
+                  <li><a href="#">Animation Course</a></li>
+                  <li><a href="#">Graphic Design</a></li>
+                  <li><a href="#">Video Editing</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li><a href="#">Content Writing</a></li>
+                  <li><a href="#">Full-Stack Web Dev</a></li>
+                  <li><a href="#">English Spoken</a></li>
+                  <li><a href="#">Mobile App Dev</a></li>
+                  <li><a href="#">Data Science</a></li>
+                  <li><a href="#">Business Analyst</a></li>
+                  <li><a href="#">2D Animation</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-3 col-md-6 footer-column">
+            <h3>Industrial Trainings</h3>
+            <ul>
+              <li><a href="#">B.Tech</a></li>
+              <li><a href="#">M.Tech</a></li>
+              <li><a href="#">BCA</a></li>
+              <li><a href="#">MCA</a></li>
+              <li><a href="#">B.Sc</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-contacts">
+        <p>Business No: +91 7780879789</p>
+        <p>Email: info@skillwaala.com</p>
+        <p>Email: hr@skillwaala.com</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

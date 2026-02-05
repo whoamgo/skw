@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Add Trainer</title>
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/adminaddtrainer.css" />
+  </head>
+  <body>
+    <!-- ✅ SIDEBAR -->
+    <div class="sidebar">
+      <div class="brand">
+        <i class="fa-solid fa-user"></i>
+        <span>Admin</span>
+      </div>
+      <nav class="nav flex-column">
+        <a class="nav-link active" href="./admin.html" data-title="Dashboard">
+          <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./admintotalstudents.html"
+          data-title="Total Student Enroll"
+        >
+          <i class="fa-solid fa-user-check me-1"></i>
+          <span>Total Student Enroll</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./adminbatchcount.html"
+          data-title="Active Courses Count"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Active Courses Count</span>
+        </a>
+        <a class="nav-link" href="./adminnotification.html" data-title="All Community Quarry">
+          <i class="fa-solid fa-comments me-1"></i
+          ><span>All Community Quarry</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./admintrainermanage.html"
+          data-title="Trainer Dashboard"
+        >
+          <i class="fa-solid fa-users me-1"></i><span>Trainer Dashboard</span>
+        </a>
+
+        <a
+          class="nav-link"
+          href="./adminhiringportal.html"
+          data-title="Hiring Portal"
+        >
+          <i
+            class="fa-solid fa-arrows-down-to-people me-1"
+          ></i><span>Hiring Portal</span>
+        </a>
+
+        <hr />
+        <div class="m-2">Account</div>
+        <a class="nav-link" href="./index.html" data-title="Logout">
+          <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
+        </a>
+        <a
+          class="nav-link"
+          href="https://www.skillwaala.com/contact-us"
+          data-title="Support"
+        >
+          <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
+        </a>
+      </nav>
+    </div>
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="sidebar-toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand fw-bold mx-auto" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="130" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+   
+      </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container-fluid p-3 p-md-4">
+        <div class="topbar">
+          <h6 class="mb-0 text-muted">Home / Trainer Dashboard /Add new instructor</h6>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <i class="bi bi-bell fs-5"></i>
+          </div>
+        </div>
+
+        <div class="profile-hero mt-3">
+          <div class="profile-left">
+            <img
+              src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
+              class="profile-avatar"
+            />
+            <div>
+              <h6 class="mb-0 fs-2">Admin</h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header -->
+        <div
+          class="d-flex justify-content-between align-items-center mb-4 mt-4"
+        >
+          <div>
+            <h4 class="fw-bold">Instructor Management</h4>
+          </div>
+        </div>
+
+        <!-- Form Box -->
+        <div class="p-4 bg-white rounded shadow-sm border">
+          <form action="" id="createProfileForm">
+             <h6 class="fw-bold mb-3">Basic information</h6>
+
+          <div class="row g-3">
+            <!-- First Name -->
+            <div class="col-md-6">
+              <label class="form-label small">First Name</label>
+              <input type="text" class="form-control" placeholder="Hitesh" />
+            </div>
+
+            <!-- Last Name -->
+            <div class="col-md-6">
+              <label class="form-label small">Last Name</label>
+              <input type="text" class="form-control" placeholder="Goutam" />
+            </div>
+
+            <!-- Email -->
+            <div class="col-12">
+              <label class="form-label small">Email Id</label>
+              <input type="email" id="trainerEmail" class="form-control" placeholder="Enter Trainer Email" required>
+            </div>
+
+                        <!-- Password -->
+            <div class="col-12">
+              <label class="form-label small">Password</label>
+              <input type="password" id="trainerPassword" class="form-control" placeholder="Enter Trainer Password" required>
+            </div>
+
+            <!-- Mobile -->
+            <div class="col-12">
+              <label class="form-label small">Mo No.</label>
+
+              <div class="input-group">
+                <span class="input-group-text">+91</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="9024114094"
+                />
+              </div>
+            </div>
+
+            <!-- Checkboxes -->
+            <div class="col-md-6">
+              <label class="form-label small">Instructor course</label>
+              <div class="checkbox-box">
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" checked />
+                  <label class="form-check-label">Graphic design</label>
+                </div>
+
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" checked />
+                  <label class="form-check-label">Animation</label>
+                </div>
+
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">Digital marketing</label>
+                </div>
+
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">Content Writing</label>
+                </div>
+
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">English Spoken</label>
+                </div>
+
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">Web development</label>
+                </div>
+
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" checked />
+                  <label class="form-check-label">Video Editing</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Image -->
+            <div class="col-md-6">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                class="profile-img mb-2"
+                alt="Profile Image"
+              />
+
+              <button class="btn btn-danger upload-btn">
+                + Upload Profile pic
+                <input type="file" class="d-none" />
+              </button>
+            </div>
+
+            <!-- Submit -->
+            <div class="col-12 mt-3">
+              <button type="submit"  class="btn btn-warning btn-custom submit-btn">Submit</button>
+            </div>
+          </div>
+          </form>
+         
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+    
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+          <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-contacts">
+          <p>Business No: +91 7766967799</p>
+          <p>Email: hro@skillwaala.com</p>
+        </div>
+      </footer>
+    </main>
+
+      <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <i class="bi bi-check-circle-fill success-icon"></i>
+        <h4 class="mb-2 text-success fw-bold">Trainer Created Successfully!</h4>
+        <p class="mb-3 text-muted">Here are the trainer details:</p>
+
+        <div class="text-start bg-light p-3 rounded mb-3">
+          <p class="mb-1"><strong>Email:</strong> <span id="displayEmail"></span></p>
+          <p class="mb-0"><strong>Password:</strong> <span id="displayPassword"></span></p>
+        </div>
+
+        <button class="btn copy-btn mb-3" id="copyBtn"><i class="bi bi-clipboard"></i> Copy Details</button>
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ JS -->
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const toggleBtn = document.querySelector(".sidebar-toggle-btn");
+      const navLinks = document.querySelectorAll(".sidebar .nav-link");
+
+      // Sidebar toggle for desktop + mobile
+      toggleBtn.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          sidebar.classList.toggle("show");
+        } else {
+          sidebar.classList.toggle("collapsed");
+        }
+      });
+
+      // ✅ Auto set active link based on URL
+      const currentLocation = window.location.href;
+      navLinks.forEach((link) => {
+        if (link.href === currentLocation) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    </script>
+
+
+      <script>
+    // Handle form submission
+    document.getElementById('createProfileForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('trainerEmail').value;
+      const password = document.getElementById('trainerPassword').value;
+
+      // Set values in modal
+      document.getElementById('displayEmail').innerText = email;
+      document.getElementById('displayPassword').innerText = password;
+
+      // Open success modal
+      const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+      successModal.show();
+    });
+
+    // Copy button functionality
+    document.getElementById('copyBtn').addEventListener('click', function() {
+      const email = document.getElementById('displayEmail').innerText;
+      const password = document.getElementById('displayPassword').innerText;
+      const details = `Email: ${email}\nPassword: ${password}`;
+
+      navigator.clipboard.writeText(details);
+
+      this.innerHTML = '<i class="bi bi-check2-circle"></i> Copied!';
+      this.classList.remove('btn-success');
+      setTimeout(() => {
+        this.innerHTML = '<i class="bi bi-clipboard"></i> Copy Details';
+      }, 2000);
+    });
+  </script>
+
+  </body>
+</html>

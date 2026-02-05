@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Recorded Courses</title>
+
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/studentrecorded.css" />
+  </head>
+  <body>
+    <!-- ✅ SIDEBAR -->
+    <div class="sidebar">
+      <div class="brand">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Student</span>
+      </div>
+      <nav class="nav flex-column">
+        <a
+          class="nav-link active"
+          href="./studentdashboard.html"
+          data-title="Dashboard"
+        >
+          <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentprofile.html"
+          data-title="My Profile"
+        >
+          <i class="fa-solid fa-user-check me-1"></i> <span>My Profile</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentenroll.html"
+          data-title="Enroll Courses"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Enroll Courses</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentcertificate.html"
+          data-title="My Certificate"
+        >
+          <i class="fa-solid fa-calendar me-1"></i><span>My Certificate</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentattendance.html"
+          data-title="Attendance record"
+        >
+          <i class="fa-solid fa-file-lines me-1"></i
+          ><span>Attendance record</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentrecordedcourse.html"
+          data-title="Recorded Course"
+        >
+          <i class="fa-solid fa-clapperboard me-1"></i
+          ><span>Recorded Course</span>
+        </a>
+        <hr />
+        <div class="m-2">Account</div>
+        <a class="nav-link" href="./index.html" data-title="Logout">
+          <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
+        </a>
+        <a class="nav-link" href="https://www.skillwaala.com/contact-us" data-title="Support">
+          <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="sidebar-toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand fw-bold ms-2" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="130" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Courses</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./hirepage.html">Hire from us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Job Search</a>
+            </li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container-fluid p-3 p-md-4">
+        <div class="topbar">
+          <h6 class="mb-0 text-muted">Home / Recorded course</h6>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <i class="bi bi-bell fs-5"></i>
+          </div>
+        </div>
+
+        <div class="profile-hero mt-3">
+          <div class="profile-left">
+            <img
+              src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
+              class="profile-avatar"
+            />
+            <div>
+              <h6 class="mb-0 fs-4">Welcome, Ranjeet Singh!</h6>
+              <div class="small text-light">Student</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-5" style="max-width: 97%">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-center mb-3"
+        >
+          <div>
+            <h3 class="section-title">Recorded Courses</h3>
+            <p class="section-subtitle mb-0">
+              Access your complete library of video course playlists.
+            </p>
+          </div>
+
+          <div class="search-box mt-3 mt-md-0" style="width: 280px">
+            <i class="bi bi-search"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search courses..."
+            />
+          </div>
+        </div>
+
+        <div class="row gy-4" id="courseList">
+          <!-- Course 1 -->
+          <div class="col-lg-4 col-md-6 course-item">
+            <div class="card course-card">
+              <div class="course-img">
+                <img
+                  src="https://learn.g2.com/hubfs/iStock-1191609321%20%281%29.jpg"
+                  alt="Graphic Design"
+                />
+              </div>
+              <div class="course-body">
+                <h5 class="course-title">Graphic Design Master Class</h5>
+                <div class="course-meta">
+                  <i class="bi bi-play-circle"></i> 25 Videos &nbsp; | &nbsp;
+                  <i class="bi bi-clock"></i> 8 Hours
+                </div>
+                <div class="progress mb-3">
+                  <div class="progress-bar" style="width: 65%"></div>
+                </div>
+                <button  class="btn btn-sm btn-start btn-custom openModal">
+                  <i class="bi bi-play-fill"></i> Start Course
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="col-lg-4 col-md-6 course-item">
+            <div class="card course-card">
+              <div class="course-img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCDH35naqsphwdtklrbmXHBopjyEin3qkb0Q&s"
+                  alt="Animation"
+                />
+              </div>
+              <div class="course-body">
+                <h5 class="course-title">Animation & Motion Graphics</h5>
+                <div class="course-meta">
+                  <i class="bi bi-play-circle"></i> 18 Videos &nbsp; | &nbsp;
+                  <i class="bi bi-clock"></i> 6 Hours
+                </div>
+                <div class="progress mb-3">
+                  <div class="progress-bar" style="width: 40%"></div>
+                </div>
+                <button class="btn btn-sm btn-start btn-custom openModal">
+                  <i class="bi bi-play-fill"></i> Start Course
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="col-lg-4 col-md-6 course-item">
+            <div class="card course-card">
+              <div class="course-img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqlHgZdwXPsHa6YZm-AfIa616RDtf1v725pQ&s"
+                  alt="Digital Marketing"
+                />
+              </div>
+              <div class="course-body">
+                <h5 class="course-title">Digital Marketing Strategy</h5>
+                <div class="course-meta">
+                  <i class="bi bi-play-circle"></i> 20 Videos &nbsp; | &nbsp;
+                  <i class="bi bi-clock"></i> 7 Hours
+                </div>
+                <div class="progress mb-3">
+                  <div class="progress-bar" style="width: 85%"></div>
+                </div>
+                <button
+               
+
+                  class="btn btn-sm btn-continue btn-custom openModal"
+                >
+                  <i class="bi bi-arrow-repeat"></i> Continue
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4 -->
+          <div class="col-lg-4 col-md-6 course-item">
+            <div class="card course-card">
+              <div class="course-img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuK5rkaD80YTnSEo4jMfXKHdGhorfc6_s9fA&s"
+                  alt="SEO"
+                />
+              </div>
+              <div class="course-body">
+                <h5 class="course-title">SEO & Search Marketing</h5>
+                <div class="course-meta">
+                  <i class="bi bi-play-circle"></i> 22 Videos &nbsp; | &nbsp;
+                  <i class="bi bi-clock"></i> 9 Hours
+                </div>
+                <div class="progress mb-3">
+                  <div class="progress-bar" style="width: 45%"></div>
+                </div>
+                <button
+                  id="openModal"
+                   class="btn btn-sm btn-continue btn-custom openModal"
+                >
+                  <i class="bi bi-arrow-repeat"></i> Continue
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 5 -->
+          <div class="col-lg-4 col-md-6 course-item">
+            <div class="card course-card">
+              <div class="course-img">
+                <img
+                  src="https://conseltex.com/wp-content/uploads/2024/06/web-development.jpg"
+                  alt="Web Dev"
+                />
+              </div>
+              <div class="course-body">
+                <h5 class="course-title">Web Development Fundamentals</h5>
+                <div class="course-meta">
+                  <i class="bi bi-play-circle"></i> 30 Videos &nbsp; | &nbsp;
+                  <i class="bi bi-clock"></i> 10 Hours
+                </div>
+                <div class="progress mb-3">
+                  <div class="progress-bar" style="width: 60%"></div>
+                </div>
+                <button class="btn btn-sm btn-start btn-custom openModal">
+                  <i class="bi bi-play-fill"></i> Start Course
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 6 -->
+          <div class="col-lg-4 col-md-6 course-item">
+            <div class="card course-card">
+              <div class="course-img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP0Alp2GTNT0wChfp-ftCe-Fze38xuFVcr1w&s"
+                  alt="Video Editing"
+                />
+              </div>
+              <div class="course-body">
+                <h5 class="course-title">Video Editing & Production</h5>
+                <div class="course-meta">
+                  <i class="bi bi-play-circle"></i> 16 Videos &nbsp; | &nbsp;
+                  <i class="bi bi-clock"></i> 5 Hours
+                </div>
+                <div class="progress mb-3">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+                <button
+                  id="openModal"
+                  class="btn btn-sm btn-continue btn-custom openModal"
+                >
+                  <i class="bi bi-arrow-repeat"></i> Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blur Background -->
+      <div class="blur-bg" id="blurBg"></div>
+
+      <!-- Custom Modal -->
+      <div class="custom-modal" id="courseModal">
+        <button class="close-btn" id="closeModal">
+          <i class="bi bi-x-circle"></i>
+        </button>
+
+        <h4>Graphic Design Masterclass</h4>
+        <p class="text-muted mb-3">
+          Learn the fundamentals of graphic design including typography, color
+          theory, and layout principles.
+        </p>
+
+        <div class="d-flex align-items-center mb-3 flex-wrap gap-2">
+          <span><i class="bi bi-film text-danger fs-5"></i> 10 videos</span>
+          <span
+            ><i class="bi bi-clock-history fs-5 text-warning"></i> 08h 45m</span
+          >
+          <span
+            ><i class="bi bi-check-circle text-success fs-5"></i> 5
+            completed</span
+          >
+        </div>
+
+        <p class="mb-1 fw-semibold">Course Progress - 42%</p>
+        <div class="course-progress mb-3">
+          <div class="progress-bar"></div>
+        </div>
+
+        <!-- Scrollable Content -->
+        <div class="modal-body-content">
+          <!-- Course List -->
+          <div class="course-item completed">
+            <div class="course-left">
+              <img
+                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8"
+                class="thumb"
+                alt="thumb"
+              />
+              <div>
+                <h6>1. Introduction to Graphic Design</h6>
+                <small
+                  ><i class="bi bi-check-circle-fill me-1"></i>Completed</small
+                >
+              </div>
+            </div>
+            <a href="./videoplayer.html">
+              <button class="play-btn">
+                <i class="bi bi-play-fill"></i> Play
+              </button>
+            </a>
+          </div>
+
+          <div class="course-item completed">
+            <div class="course-left">
+              <img
+                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8"
+                class="thumb"
+                alt="thumb"
+              />
+              <div>
+                <h6>2. Color Theory Basics</h6>
+                <small
+                  ><i class="bi bi-check-circle-fill me-1"></i>Completed</small
+                >
+              </div>
+            </div>
+            <a href="./videoplayer.html">
+              <button class="play-btn">
+                <i class="bi bi-play-fill"></i> Play
+              </button>
+            </a>
+          </div>
+
+          <div class="course-item completed">
+            <div class="course-left">
+              <img
+                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8"
+                class="thumb"
+                alt="thumb"
+              />
+              <div>
+                <h6>3. Typography Principles</h6>
+                <small
+                  ><i class="bi bi-check-circle-fill me-1"></i>Completed</small
+                >
+              </div>
+            </div>
+            <a href="./videoplayer.html">
+              <button class="play-btn">
+                <i class="bi bi-play-fill"></i> Play
+              </button>
+            </a>
+          </div>
+
+          <div class="course-item pending">
+            <div class="course-left">
+              <img
+                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8"
+                class="thumb"
+                alt="thumb"
+              />
+              <div>
+                <h6>4. Layout and Composition</h6>
+                <small><i class="bi bi-lock-fill me-1"></i>Pending</small>
+              </div>
+            </div>
+            <a href="./videoplayer.html">
+              <button class="play-btn">
+                <i class="bi bi-play-fill"></i> Play
+              </button>
+            </a>
+          </div>
+
+          <div class="course-item pending">
+            <div class="course-left">
+              <img
+                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8"
+                class="thumb"
+                alt="thumb"
+              />
+              <div>
+                <h6>5. Branding Fundamentals</h6>
+                <small><i class="bi bi-lock-fill me-1"></i>Pending</small>
+              </div>
+            </div>
+            <a href="./videoplayer.html">
+              <button class="play-btn">
+                <i class="bi bi-play-fill"></i> Play
+              </button>
+            </a>
+          </div>
+
+          <div class="course-item pending">
+            <div class="course-left">
+              <img
+                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8"
+                class="thumb"
+                alt="thumb"
+              />
+              <div>
+                <h6>5. Branding Fundamentals</h6>
+                <small><i class="bi bi-lock-fill me-1"></i>Pending</small>
+              </div>
+            </div>
+            <button class="play-btn">
+              <i class="bi bi-play-fill"></i> Play
+            </button>
+          </div>
+
+          <div class="course-item pending">
+            <div class="course-left">
+              <img
+                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8"
+                class="thumb"
+                alt="thumb"
+              />
+              <div>
+                <h6>5. Branding Fundamentals</h6>
+                <small><i class="bi bi-lock-fill me-1"></i>Pending</small>
+              </div>
+            </div>
+            <button class="play-btn">
+              <i class="bi bi-play-fill"></i> Play
+            </button>
+          </div>
+
+          <div class="course-item pending">
+            <div class="course-left">
+              <img
+                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8"
+                class="thumb"
+                alt="thumb"
+              />
+              <div>
+                <h6>5. Branding Fundamentals</h6>
+                <small><i class="bi bi-lock-fill me-1"></i>Pending</small>
+              </div>
+            </div>
+            <button class="play-btn">
+              <i class="bi bi-play-fill"></i> Play
+            </button>
+          </div>
+
+          <div class="course-item pending">
+            <div class="course-left">
+              <img
+                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8"
+                class="thumb"
+                alt="thumb"
+              />
+              <div>
+                <h6>5. Branding Fundamentals</h6>
+                <small><i class="bi bi-lock-fill me-1"></i>Pending</small>
+              </div>
+            </div>
+            <button class="play-btn">
+              <i class="bi bi-play-fill"></i> Play
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container-fluid py-5">
+
+          <div class="row g-4 footer-main">
+            <!-- First Column -->
+            <div class="col-lg-3 col-md-12 footer-logo">
+              <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+
+              <p class="m-2"></p>
+              <p><strong>Social Links:</strong></p>
+              <a href="https://www.facebook.com/skillwaala/"
+                ><i
+                  class="bi bi-facebook bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+              |
+              <a href="https://www.instagram.com/skillwaala"
+                ><i
+                  class="bi bi-instagram bg-danger px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+              |
+              <a href="https://www.linkedin.com/company/skillwaala/"
+                ><i
+                  class="bi bi-linkedin bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+              |
+              <a
+                href="https://api.whatsapp.com/send/?phone=917766967799&text=Hello+SkillWaala+Team&type=phone_number&app_absent"
+                ><i
+                  class="bi bi-whatsapp bg-success px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+
+              <p><strong>Email:</strong>hro@skillwaala.com</p>
+              <p>
+                <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+                Scheme, Triveni Nagar Jaipur, 302018
+              </p>
+              <p><strong>Contact:</strong>+91 7766967799</p>
+            </div>
+
+            <!-- Second Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li>
+                  <a href="https://www.skillwaala.com/about-us">About Us</a>
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </li>
+                <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+                <li>
+                  <a href="https://www.skillwaala.com/privacy-policy"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Third Column -->
+            <div class="col-lg-4 col-md-12 footer-column">
+              <h3>Trending Courses</h3>
+              <div class="row g-3">
+                <div class="col-6">
+                  <ul>
+                    <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                    <li>
+                      <a href="./contentwriting.html">Content Writing </a>
+                    </li>
+                    <li><a href="./seo.html">SEO Course </a></li>
+                    <li>
+                      <a href="./socialmediamarketing.html"
+                        >Social Media Marketing
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./webbatch.html">Full-Stack Web Development </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-6">
+                  <ul>
+                    <li>
+                      <a href="./performancemarketing.html"
+                        >Performance Marketing
+                      </a>
+                    </li>
+                    <li><a href="./englishcourse.html">English Spoken </a></li>
+                    <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                    <li><a href="./videoediting.html">Video Editing </a></li>
+                    <li><a href="./2danimation.html">2D Animation </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fourth Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Training Program</h3>
+              <ul>
+                <li><a href="./hirepage.html">Digital Marketing </a></li>
+                <li><a href="./hirepage.html">Content Writing </a></li>
+                <li><a href="./hirepage.html">Animation </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+          <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-contacts">
+          <p>Business No: +91 7766967799</p>
+          <p>Email: hro@skillwaala.com</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ JS -->
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const toggleBtn = document.querySelector(".sidebar-toggle-btn");
+      const navLinks = document.querySelectorAll(".sidebar .nav-link");
+
+      // Sidebar toggle for desktop + mobile
+      toggleBtn.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          sidebar.classList.toggle("show");
+        } else {
+          sidebar.classList.toggle("collapsed");
+        }
+      });
+
+      // ✅ Auto set active link based on URL
+      const currentLocation = window.location.href;
+      navLinks.forEach((link) => {
+        if (link.href === currentLocation) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    </script>
+
+    <!-- JS for Search Filter -->
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const courseList = document.querySelectorAll(".course-item");
+
+      searchInput.addEventListener("input", (e) => {
+        const value = e.target.value.toLowerCase();
+        courseList.forEach((course) => {
+          const title = course
+            .querySelector(".course-title")
+            .textContent.toLowerCase();
+          course.style.display = title.includes(value) ? "block" : "none";
+        });
+      });
+    </script>
+
+    <!-- Script -->
+    <script>
+      const openModalButtons = document.querySelectorAll(".openModal");
+      const closeModal = document.getElementById("closeModal");
+      const courseModal = document.getElementById("courseModal");
+      const blurBg = document.getElementById("blurBg");
+
+      // Open modal on click for all buttons
+      openModalButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          courseModal.classList.add("active");
+          blurBg.style.display = "block";
+        });
+      });
+
+      // Close modal function
+      const closeAll = () => {
+        courseModal.classList.remove("active");
+        blurBg.style.display = "none";
+      };
+
+      // Close modal when X or blur background clicked
+      closeModal.addEventListener("click", closeAll);
+      blurBg.addEventListener("click", closeAll);
+    </script>
+  </body>
+</html>

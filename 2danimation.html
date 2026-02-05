@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2D Animation</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/2danimation.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="180" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Courses</a>
+            </li>
+
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./hirepage.html">Hire From Us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.skillwaala.com/">Blog</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Job Search</a>
+            </li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <span class="badge bg-light text-dark mb-2"
+              >Completely Free Course</span
+            >
+            <h1 class="mb-3">
+              Free
+
+              <span class="certificate">2D Animation Course </span> Online With
+              Certificate
+            </h1>
+            <p class="mb-3">
+              Bring your imagination to life with Skillwaala’s free online 2D
+              animation course. Our course is designed to balance creativity and
+              industry relevance. With hands-on training, project-based
+              learning, and expert mentorship, you will gain the skills needed
+              to become a professional animator.
+            </p>
+
+            <a href="#" class="btn btn-light fw-bold"
+            data-bs-toggle="modal" data-bs-target="#lmsModal"
+            >Enroll Now (Live)</a>
+            <a href="./loginreg.html" class="btn btn-outline-light"
+              >Enroll Now (Recorded Course)</a
+            >
+            <div class="d-flex flex-wrap gap-3 justify-content-start mt-4">
+              <div class="info-box text-center">
+                <i class="bi bi-clock-history"></i>
+                <span>Duration: 5 Weeks</span>
+              </div>
+              <div class="info-box text-center">
+                <i class="bi bi-laptop"></i>
+                <span>Live Classes: 12+ Hours</span>
+              </div>
+              <div class="info-box text-center">
+                <i class="bi bi-award"></i>
+                <span>Certificate Included</span>
+              </div>
+              <div class="info-box text-center">
+                <i class="bi bi-globe"></i>
+                <span>Apply Online</span>
+              </div>
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="col-lg-6 text-center">
+            <img
+              src="https://img.freepik.com/free-photo/social-media-marketing-concept-marketer-with-laptop_23-2150063164.jpg"
+              class="img-fluid course-img"
+              alt="Digital Marketing"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WILL YOU LEARN SECTION -->
+    <section class="learn-section container text-center mt-5">
+      <h3>What Will You Learn in Skillwaala’s Free 2D Animation Course?</h3>
+      <div class="container learn">
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="learn-card">
+              <i class="bi bi-lightbulb fs-2"></i>
+              <h5>Fundamentals of Animation</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-file-earmark-text fs-2"></i>
+              <h5>Character Design & Development</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-share fs-2"></i>
+              <h5>Storyboarding & Scripting</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-gear fs-2"></i>
+              <h5>Digital Drawing & Illustration</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-bar-chart fs-2"></i>
+              <h5>Frame-by-Frame Animation</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-globe fs-2"></i>
+              <h5>Lip Sync & Expressions</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-pencil-square fs-2"></i>
+              <h5>Background & Scene Design</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-pencil-square fs-2"></i>
+              <h5>Software Training</h5>
+            </div>
+
+            <!-- infinite loop look smooth -->
+            <div class="learn-card">
+              <i class="bi bi-lightbulb fs-2"></i>
+              <h5>Fundamentals of Animation</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-file-earmark-text fs-2"></i>
+              <h5>Character Design & Development</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-share fs-2"></i>
+              <h5>Storyboarding & Scripting</h5>
+            </div>
+            <div class="learn-card">
+              <i class="bi bi-gear fs-2"></i>
+              <h5>Digital Drawing & Illustration</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="learn-desc mt-5">
+        Our free 2D animation course with certification is designed to give you
+        both artistic creativity and technical mastery. You will not only learn
+        how to animate but also how to tell compelling stories through visuals.
+        By the end of this animation course, you will have a portfolio-ready
+        project and a strong foundation to pursue careers in animation, gaming,
+        advertising, or content creation.
+      </p>
+    </section>
+
+    <div class="syllabus-wrapper">
+      <!-- Header -->
+      <div class="header">
+        <div>
+          <h2>2D Animation Course Syllabus</h2>
+          <p>
+            Skillwaala’s 2D Animation course online is structured to guide you
+            from the basics of animation to professional-level projects.
+          </p>
+        </div>
+        <button class="download-btn">
+          <i class="fa-solid fa-download me-2"></i> Download Curriculum
+        </button>
+      </div>
+
+      <!-- Info Boxes -->
+      <div class="info-boxes">
+        <div class="with-badge">With</div>
+        <div class="left-box">
+          <span>45 Days</span>
+          <span>Online Mode</span>
+          <span>Free Certificate</span>
+        </div>
+        <div class="right-box">
+          <span><i class="fa-solid fa-briefcase"></i> Career Support</span>
+        </div>
+      </div>
+
+      <!-- Accordion -->
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 1
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Introduction to Adobe Animate CC & Interface</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 2
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Basic Tools & Drawing in Animate</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 3
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Layers & Timeline Basics</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 4
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Shape Tween Animation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 5
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Motion Tween Animation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 6
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Classic Tween & Frame-by-Frame Animation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 7
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Symbols (Graphic, Button, Movie Clip)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 8
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Library & Reusability</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 9
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Character Rigging & Bone Tool</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 10
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Walk Cycle Animation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 11
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Lip Sync Animation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 12
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Background Design & Parallax Effect</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 13
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Camera Tool in Animate</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 14
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Masking Animation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 15
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Advanced Character Animation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 16
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Interactive Buttons & ActionScript Basics</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 17
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Exporting Animation (GIF, MP4, HTML5)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 18
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Banner Ad Animation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 19
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Full Character Dialogue Scene</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Module 20
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div>
+              <p class="float-end me-3">
+                <span class="badge bg-success me-2">6</span>Live sessions
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-warning me-2">2</span>Projects
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-danger me-2">3</span>Case Studies
+              </p>
+              <p class="float-end me-3">
+                <span class="badge bg-secondary me-2">2</span>Quizzes
+              </p>
+            </div>
+            <ul class="topics-list">
+              <li>Final Project & Portfolio Setup</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="tools-section">
+      <div class="container">
+        <h2>Tools You Will Master</h2>
+
+        <!-- Row 1 -->
+        <div class="scroll-container">
+          <div class="tools-wrapper">
+            <div class="tool-card">● Adobe Photoshop</div>
+            <div class="tool-card">● Adobe Illustrator</div>
+            <div class="tool-card">● Adobe Animate</div>
+          </div>
+        </div>
+
+        <!-- Row 2 (reverse direction) -->
+        <div class="scroll-container mt-4">
+          <div class="tools-wrapper reverse">
+            <div class="tool-card">● Adobe Photoshop</div>
+            <div class="tool-card">● Adobe Illustrator</div>
+            <div class="tool-card">● Adobe Animate</div>
+          </div>
+        </div>
+
+        <a href="./loginreg.html"
+          ><button class="enroll-btn mt-5">Enroll for Free</button></a
+        >
+      </div>
+    </section>
+
+    <section class="enroll-section">
+      <h2>Who Should Enroll in Skillwaala’s Free 2D Animation Course?</h2>
+      <p>
+        Skillwaala’s 2D Animation free course is designed for anyone passionate
+        about storytelling, design, and creativity. Whether you are a student
+        starting out or a professional upgrading your skills, this course fits
+        all learners.
+      </p>
+
+      <div class="row g-4">
+        <!-- Left side list -->
+        <div class="col-md-4">
+          <ul class="category-list">
+            <li class="active" data-target="card1">
+              <i class="fa-solid fa-user-graduate me-2"></i> Students &
+              Beginners
+            </li>
+            <li data-target="card2">
+              <i class="fa-solid fa-pen-nib me-2"></i> Aspiring Artists &
+              Illustrators
+            </li>
+            <li data-target="card3">
+              <i class="fa-solid fa-briefcase me-2"></i> Working Professionals
+              in Marketing & Media
+            </li>
+
+            <li data-target="card4">
+              <i class="fa-solid fa-blog me-2"></i> Freelancers & Career
+              Changers
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right side cards -->
+        <div class="col-md-8" id="cards-container">
+          <div id="card1" class="card-box active">
+            <div>
+              <h5>Students & Beginners</h5>
+              <p>
+                If you have just completed school or college and are looking for
+                a 2D animation course after 12th, this program gives you the
+                perfect foundation to build a creative career in animation,
+                design, or gaming.
+              </p>
+            </div>
+            <img
+              src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+              alt="Students"
+            />
+          </div>
+
+          <div id="card2" class="card-box">
+            <div>
+              <h5>Aspiring Artists & Illustrators</h5>
+              <p>
+                For those who love drawing and designing characters, this 2D
+                animation online course helps transform your sketches into fully
+                animated creations.
+              </p>
+            </div>
+            <img
+              src="https://images.pexels.com/photos/6953859/pexels-photo-6953859.jpeg"
+              alt="Freelancers"
+            />
+          </div>
+
+          <div id="card3" class="card-box">
+            <div>
+              <h5>Working Professionals in Marketing & Media</h5>
+              <p>
+                Marketers, designers, and media professionals can add animation
+                as a valuable skill to create engaging advertisements, explainer
+                videos, and brand content.
+              </p>
+            </div>
+            <img
+              src="https://images.pexels.com/photos/3183173/pexels-photo-3183173.jpeg"
+              alt="Marketers"
+            />
+          </div>
+
+          <div id="card4" class="card-box">
+            <div>
+              <h5>Freelancers & Career Changers</h5>
+              <p>
+                If you are planning to start freelancing or shift to the
+                creative design industry, our 2D animation course will serve as
+                a launchpad for your career.
+              </p>
+            </div>
+            <img
+              src="https://images.pexels.com/photos/7358/startup-photos.jpg"
+              alt="Bloggers"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Reg -->
+    <div class="container-fluid reg-section">
+      <div class="row align-items-center">
+        <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
+          <h2>Enroll for Free</h2>
+          <p class="mb-3">
+            Join thousands of students who have already started their journey
+            with our comprehensive course.
+          </p>
+          <a href="./loginreg.html"><button>Start Learning Today</button></a>
+        </div>
+        <div class="col-md-5 text-center reg-image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoMyrwd0WTHi7QPYtsYrHhG9KVAH-wh_wizA&s"
+            alt="Digital Marketing"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section class="why-section container">
+      <div class="row align-items-start">
+        <!-- Left -->
+        <div class="col-lg-5 col-md-12 why-left mb-5 mb-lg-0">
+          <h2>Why Choose Skillwaala’s Free 2D Animation Course?</h2>
+          <p>
+            Our 2D animation course is designed to make you industry-ready with
+            a practical, project-driven approach. Here’s why learners choose us:
+          </p>
+        </div>
+
+        <!-- Right -->
+        <div class="col-lg-7 col-md-12 why-right position-relative">
+          <div class="feature-box">
+            <div class="icon">
+              <i class="bi bi-circle"></i>
+            </div>
+            <div>
+              <h5>Free Certification</h5>
+              <p>Get a recognized certificate upon completion.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="icon">
+              <i class="bi bi-circle"></i>
+            </div>
+            <div>
+              <h5>Beginner-friendly</h5>
+              <p>Easy-to-follow lessons, even with no prior experience</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="icon">
+              <i class="bi bi-circle"></i>
+            </div>
+            <div>
+              <h5>Expert Faculty</h5>
+              <p>Learn from experienced animators and industry mentors</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="icon">
+              <i class="bi bi-circle"></i>
+            </div>
+            <div>
+              <h5>Hands-on Training</h5>
+              <p>Work on real projects to build your portfolio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container Jobs-program py-5">
+      <!-- Top Jobs Section -->
+      <div class="custom-box text-center">
+        <h4 class="fw-bold mb-2">
+          Career Opportunities After 2D Animation Certification
+        </h4>
+        <p class="text-muted mb-4">
+          Completing Skillwaala’s 2D Animation course with certification opens
+          doors to a variety of creative roles in the animation, VFX, and
+          multimedia industries.
+        </p>
+
+        <div class="row g-3 justify-content-center">
+          <div class="col-md-4 col-6">
+            <div class="job-card orange">
+              <i class="bi bi-bullseye"></i>
+              <div>
+                2D Animator/Motion Designer:
+                <span>₹2.5 LPA to ₹5 LPA/ annually </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="job-card blue">
+              <i class="bi bi-graph-up"></i>
+              <div>
+                Storyboard Artist
+                <span> ₹3 LPA to ₹6 LPA /annually </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="job-card green">
+              <i class="bi bi-people"></i>
+              <div>
+                Character Designer:
+                <span>₹4 LPA to ₹8 LPA /annually</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="job-card red">
+              <i class="bi bi-file-earmark-text"></i>
+              <div>
+                Visual Effects (VFX) Artist:
+                <span>₹4 LPA to ₹8 LPA /annually</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="job-card purple">
+              <i class="bi bi-currency-dollar"></i>
+              <div>
+                Multimedia Designer:
+                <span>₹3 LPA TO ₹9 LPA /annually </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="job-card pink">
+              <i class="bi bi-bar-chart-steps"></i>
+              <div>
+                UI/UX Designer:
+                <span>₹5 LPA to ₹12 LPA /annually</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECOND FAQ SECTION START -->
+    <section class="faq-section-2" id="faq2">
+      <div class="container">
+        <h2>FAQ (Frequently Asked Questions)</h2>
+
+        <div class="faq-box-2">
+          <div class="accordion" id="faqAccordion2">
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q1-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a1-2"
+                >
+                  Q1. Do I need prior drawing or animation knowledge to enroll
+                  in the course?
+                </button>
+              </h2>
+              <div
+                id="a1-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. No prior knowledge is required. Our online 2D animation
+                  free course is designed for beginners as well as students who
+                  want to refine their skills.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q2-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a2-2"
+                >
+                  Q2. What is the duration of the course?
+                </button>
+              </h2>
+              <div
+                id="a2-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. The free 2D animation course is designed to be completed
+                  in 4-6 weeks, depending on your pace of learning.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q3-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a3-2"
+                >
+                  Q3. Can working professionals take this course?
+                </button>
+              </h2>
+              <div
+                id="a3-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Yes. The course is self-paced and flexible, making it
+                  suitable for working professionals, college students, and
+                  beginners alike.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q4-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a4-2"
+                >
+                  Q4. Will I get a certificate after completing the course?
+                </button>
+              </h2>
+              <div
+                id="a4-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Yes. On successfully completing all modules and
+                  assignments, you will receive an industry-recognized
+                  certificate from a reputed IT company in Jaipur that can
+                  strengthen your portfolio and resume.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q5-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a5-2"
+                >
+                  Q5. How can I join this free 2D animation course?
+                </button>
+              </h2>
+              <div
+                id="a5-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. You can easily enroll in the online course directly
+                  through our website. The course is completely online, so you
+                  can learn from anywhere and at your convenience.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q6-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a6-2"
+                >
+                  Q6. What kind of job opportunities can I expect after
+                  completing this course?
+                </button>
+              </h2>
+              <div
+                id="a6-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. After completing our course, you can land career roles as
+                  2D Animators, Motion Graphics Designer, Character Animators,
+                  VFX Artist, UI/UX Designer, or a Multimedia Designer. Our job
+                  assistance includes resume building, interview preparation,
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q7-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a7-2"
+                >
+                  Q7. Is the online 2D animation course with a certificate
+                  really free?
+                </button>
+              </h2>
+              <div
+                id="a7-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Yes, we offer a 100% free course with certification.
+                  There are no hidden charges. You can enroll, learn, and
+                  receive a completion certificate at no cost.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="support-section">
+        <h6 class="fw-semibold mb-1">Still have question?</h6>
+        <p>
+          Our support team is here to help you with any additional questions
+          about the course.
+        </p>
+        <div class="support-btns">
+          <a href="https://www.skillwaala.com/contact-us">
+            <button class="btn btn-primary">Contact support</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Register Box Section -->
+            <section class="register-section">
+              <h2>Skillwaala Free Training Program</h2>
+              <p>Kickstart your Career with Skillwaala.</p>
+              <a href="./internship.html" class="btn">Register Now</a>
+            </section>
+          </div>
+        </div>
+        <div class="row g-4 footer-main">
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-12 footer-logo">
+            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+
+            <p class="m-2"></p>
+            <p><strong>Social Links:</strong></p>
+            <a href="https://www.facebook.com/skillwaala/"
+              ><i
+                class="bi bi-facebook bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.instagram.com/skillwaala"
+              ><i
+                class="bi bi-instagram bg-danger px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.linkedin.com/company/skillwaala/"
+              ><i
+                class="bi bi-linkedin bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a
+              href="https://api.whatsapp.com/send/?phone=917766967799&text=Hello+SkillWaala+Team&type=phone_number&app_absent"
+              ><i
+                class="bi bi-whatsapp bg-success px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+
+            <p><strong>Email:</strong>hro@skillwaala.com</p>
+            <p>
+              <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+              Scheme, Triveni Nagar Jaipur, 302018
+            </p>
+            <p><strong>Contact:</strong>+91 7766967799</p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/about-us">About Us</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/web-stories">Web Stories</a>
+              </li>
+              <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/privacy-policy"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+              </li>
+              <li><a href="https://www.skillwaala.com/gallery">Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-4 col-md-12 footer-column">
+            <h3>Trending Courses</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <ul>
+                  <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                  <li><a href="./contentwriting.html">Content Writing </a></li>
+                  <li><a href="./seo.html">SEO Course </a></li>
+                  <li>
+                    <a href="./socialmediamarketing.html"
+                      >Social Media Marketing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./webbatch.html">Full-Stack Web Development </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-6">
+                <ul>
+                  <li>
+                    <a href="./performancemarketing.html"
+                      >Performance Marketing
+                    </a>
+                  </li>
+                  <li><a href="./englishcourse.html">English Spoken </a></li>
+                  <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                  <li><a href="./videoediting.html">Video Editing </a></li>
+                  <li><a href="./2danimation.html">2D Animation </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Training Program</h3>
+            <ul>
+              <li><a href="./hirepage.html">Digital Marketing </a></li>
+              <li><a href="./hirepage.html">Content Writing </a></li>
+              <li><a href="./hirepage.html">Animation </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-contacts">
+        <p>Business No: +91 7766967799</p>
+        <p>Email: hro@skillwaala.com</p>
+      </div>
+    </footer>
+
+          <!-- Popup Modal -->
+  <div class="modal fade" id="lmsModal" tabindex="-1" aria-labelledby="lmsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100 text-center" id="lmsModalLabel">
+            <i class="bi bi-cone-striped text-warning me-2"></i>
+            Hold on tight!
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body">
+          <p>Our Live LMS is still under development! 🚀 <br>
+          Until it’s ready, message on our WhatsApp no. for details of our live classes.</p>
+
+          <div class="mt-3">
+            <label class="form-label fw-semibold">Whatsapp Number :- 917766967799</label>
+            <input type="text" id="communityLink" class="form-control text-primary" 
+              value="https://api.whatsapp.com/send/?phone=917766967799&text&type=phone_number&app_absent=0"
+              readonly onclick="window.open(this.value, '_blank')">
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer border-0 justify-content-center">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const headers = document.querySelectorAll(".accordion-header");
+      headers.forEach((header) => {
+        header.addEventListener("click", () => {
+          const body = header.nextElementSibling;
+          const isActive = header.classList.contains("active");
+          document
+            .querySelectorAll(".accordion-body")
+            .forEach((b) => b.classList.remove("open"));
+          document
+            .querySelectorAll(".accordion-header")
+            .forEach((h) => h.classList.remove("active"));
+          if (!isActive) {
+            header.classList.add("active");
+            body.classList.add("open");
+          }
+        });
+      });
+
+      const listItems = document.querySelectorAll(".category-list li");
+      const cards = document.querySelectorAll(".card-box");
+
+      listItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          listItems.forEach((li) => li.classList.remove("active"));
+          item.classList.add("active");
+
+          cards.forEach((card) => card.classList.remove("active"));
+          const target = document.getElementById(
+            item.getAttribute("data-target")
+          );
+          target.classList.add("active");
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+      });
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        cards.forEach((card) => {
+          const rect = card.getBoundingClientRect();
+          if (
+            rect.top <= window.innerHeight / 2 &&
+            rect.bottom >= window.innerHeight / 2
+          ) {
+            current = card.id;
+          }
+        });
+
+        if (current) {
+          listItems.forEach((li) => {
+            li.classList.remove("active");
+            if (li.getAttribute("data-target") === current) {
+              li.classList.add("active");
+            }
+          });
+
+          cards.forEach((card) => {
+            card.classList.remove("active");
+            if (card.id === current) {
+              card.classList.add("active");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

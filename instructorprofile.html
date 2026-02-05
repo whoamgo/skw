@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Instructor Profile</title>
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/instructorprofile.css" />
+  </head>
+  <body>
+      <!-- ✅ SIDEBAR -->
+    <div class="sidebar">
+      <div class="brand">
+        <i class="fa-solid fa-user"></i>
+        <span> Trainer</span>
+      </div>
+      <nav class="nav flex-column">
+        <a
+          class="nav-link active"
+          href="./instructor.html"
+          data-title="Dashboard"
+        >
+          <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./instructorprofile.html"
+          data-title="My Profile"
+        >
+          <i class="fa-solid fa-user-check me-1"></i> <span>My Profile</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./instructorsactivecourse.html"
+          data-title="Assigned Courses"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Assigned Courses</span>
+        </a>
+
+        <a
+          class="nav-link"
+          href="./instructoractivebatch.html"
+          data-title="Active Batch"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Active Batch</span>
+        </a>
+
+        <a
+          class="nav-link"
+          href="./upcomingliveclass.html"
+          data-title="Upcoming Live Classes"
+        >
+          <i class="fa-brands fa-youtube me-1"></i
+          ><span>Upcoming Live Classes</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./uploadedvideos.html"
+          data-title="Uploaded Videos"
+        >
+          <i class="fa-solid fa-cloud-arrow-up me-1"></i
+          ><span>Uploaded Videos</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./instructornotification.html"
+          data-title="Notifications"
+        >
+          <i class="fa-solid fa-bell me-1"></i><span>Notifications</span>
+        </a>
+        <a class="nav-link" href="./skillspacetrainer.html" data-title="SkillSpace">
+          <i class="fa-solid fa-briefcase"></i><span>SkillSpace</span>
+        </a>
+        <a class="nav-link" href="#" data-title="Community Quarry">
+          <i class="fa-solid fa-comments me-1"></i><span>Community Quarry</span>
+        </a>
+        <hr />
+        <div class="m-2">Account</div>
+        <a class="nav-link" href="./index.html" data-title="Logout">
+          <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
+        </a>
+        <a
+          class="nav-link"
+          href="https://www.skillwaala.com/contact-us"
+          data-title="Support"
+        >
+          <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
+        </a>
+      </nav>
+    </div>
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="sidebar-toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand fw-bold mx-auto" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="130" />
+        </a>
+
+      
+
+     
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container-fluid p-3 p-md-4">
+        <div class="topbar">
+          <h6 class="mb-0 text-muted">Home / My Profile</h6>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <i class="bi bi-bell fs-5"></i>
+          </div>
+        </div>
+
+        <div class="profile-hero mt-3">
+          <div class="profile-left">
+            <img
+              src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
+              class="profile-avatar"
+            />
+            <div>
+              <h6 class="mb-0 fs-2">Devanshu Sir</h6>
+              <div class="fs-5 text-light">Trainer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid my-4">
+  
+
+          <div class="row">
+            <!-- Left Section -->
+            <div class="col-lg-12 col-md-6">
+              <div class="profile-section">
+                <h5>Personal Information</h5>
+                <form class="mt-3">
+                  <!-- Profile Image -->
+                  <div class="col-md-6">
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                      class="profile-img mb-2"
+                      alt="Profile Image"
+                    />
+
+                    <button class="btn btn-danger upload-btn mb-2">
+                      <input type="file" />
+                    </button>
+                  </div>
+
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Full Name"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Address"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Contact No."
+                    />
+                  </div>
+                </form>
+
+                <div class="mb-3">
+                  <span class="p-2 badge bg-primary"
+                    >🎓 12 Courses Published</span
+                  >
+                </div>
+
+                <div class="mt-4 d-flex flex-wrap gap-2">
+                  <button
+                    class="btn btn-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#changePasswordModal"
+                  >
+                    Change Password
+                  </button>
+                  <button class="btn btn-success">Save</button>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="changePasswordModal"
+        tabindex="-1"
+        aria-labelledby="changePasswordLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="changePasswordLabel">
+                Change Password
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="oldPassword" class="form-label"
+                    >Old Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="oldPassword"
+                    placeholder="Enter old password"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="newPassword" class="form-label"
+                    >New Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="newPassword"
+                    placeholder="Enter new password"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="confirmPassword" class="form-label"
+                    >Confirm Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmPassword"
+                    placeholder="Confirm new password"
+                  />
+                </div>
+              </form>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+      
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+          <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-contacts">
+          <p>Business No: +91 7766967799</p>
+          <p>Email: hro@skillwaala.com</p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ✅ JS -->
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const toggleBtn = document.querySelector(".sidebar-toggle-btn");
+      const navLinks = document.querySelectorAll(".sidebar .nav-link");
+
+      // Sidebar toggle for desktop + mobile
+      toggleBtn.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          sidebar.classList.toggle("show");
+        } else {
+          sidebar.classList.toggle("collapsed");
+        }
+      });
+
+      // ✅ Auto set active link based on URL
+      const currentLocation = window.location.href;
+      navLinks.forEach((link) => {
+        if (link.href === currentLocation) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

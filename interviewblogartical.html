@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMO Interview Video Playlist</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .navbar {
+        background: #fff;
+        padding: 10px 25px;
+        box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 18%);
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        z-index: 2000;
+      }
+
+      .dropbtn {
+        background-color: #fff;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        color: #f26434;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .custom-nav {
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        padding: 2px 10px;
+        margin: 2px;
+      }
+
+      .custom-nav .nav-link {
+        font-weight: 500;
+        color: #333;
+        padding: 6px 12px;
+      }
+
+      .custom-nav .nav-link:hover {
+        color: #f26434;
+      }
+
+      .custom-nav .divider {
+        color: #f26434;
+        font-size: 20px;
+        margin: 0 6px;
+      }
+
+      .btn-login {
+        border: 1px solid #f36f45;
+        color: #f36f45;
+        border-radius: 10px;
+        padding: 6px 18px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .btn-login:hover {
+        background: #f36f45;
+        color: #fff;
+      }
+
+      .hero {
+        background-color: #fef2e6;
+        margin-bottom: 20px;
+      }
+
+      /* Back link */
+      .back-link {
+        text-decoration: none;
+        color: #000;
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background-color: #eef4ff;
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-icon {
+        background-color: #1a73e8;
+        color: white;
+        font-size: 26px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .hero-text h5 {
+        margin: 0;
+        color: #1a73e8;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .hero-text p {
+        margin: 0;
+        font-size: 13px;
+        color: #555;
+      }
+
+      @media (max-width: 767px) {
+        .hero-section {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-icon {
+          margin-bottom: 10px;
+        }
+
+        .section-heading::before {
+          left: 0;
+          height: 4px;
+          width: 40px;
+          top: 100%;
+        }
+      }
+
+      .register-section {
+        background: linear-gradient(135deg, #5c2dab, #7d4ed1);
+        color: #fff;
+        border-radius: 15px;
+        text-align: center;
+        padding: 40px 20px;
+        margin: 30px auto;
+        max-width: 90%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .register-section h2 {
+        font-size: 45px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .register-section p {
+        font-size: 16px;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .register-section .btn {
+        background: linear-gradient(90deg, #ff6600, #ff0000);
+        border: none;
+        padding: 12px 30px;
+        font-size: 18px;
+        border-radius: 8px;
+        color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      .register-section .btn:hover {
+        opacity: 0.85;
+      }
+
+      footer {
+        background: linear-gradient(to bottom, #ffffff, #ffbbac);
+        color: #333;
+        font-family: "Poppins", sans-serif;
+      }
+
+      footer .footer-main {
+        max-width: 90%;
+        margin: auto;
+      }
+
+      .footer-logo img {
+        width: 200px;
+        margin-bottom: 10px;
+      }
+
+      .footer-logo p {
+        font-size: 14px;
+        margin: 4px 0;
+        color: #444;
+      }
+
+      .footer-logo a {
+        color: #e65a29;
+        text-decoration: none;
+        margin: 0 4px;
+        font-size: 14px;
+      }
+
+      .footer-logo a:hover {
+        color: #ff5722;
+      }
+
+      .footer-column {
+        background: #ffe9e1;
+        border-radius: 15px;
+        padding: 25px 20px;
+        margin-right: 10px;
+      }
+
+      .footer-column h3 {
+        background: #f6d5c4;
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .footer-column ul {
+        list-style: none;
+
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .footer-column ul li {
+        margin: 8px 0;
+      }
+
+      .footer-column ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      .footer-column ul li a:hover {
+        color: #ff5722;
+      }
+
+      .footer-bottom {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 30px;
+        width: 100%;
+      }
+
+      .footer-contacts {
+        background: #ff5722;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 12px 80px;
+        font-size: 14px;
+      }
+
+      .footer-bottom p {
+        text-align: center;
+      }
+
+      .footer-contacts p {
+        margin: 0;
+        text-align: center;
+      }
+
+        .left-menu {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            height: 100%;
+             border: 1px solid black;
+
+        }
+        .left-menu .item {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .left-menu .item:hover,
+        .left-menu .item.active {
+            background: #007bff;
+            color: #fff;
+        }
+        .content-box {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            height: 100%;
+            overflow-y: auto;
+            max-height: 90vh;
+             border: 1px solid black;
+        }
+        .article{
+            border: 1px solid black;
+            border-radius: 7px;
+        }
+
+      @media (max-width: 992px) {
+        .custom-nav {
+          border: none;
+          border-radius: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 0;
+        }
+
+        .custom-nav .divider {
+          display: none;
+        }
+
+        .custom-nav .nav-link {
+          padding: 10px;
+          width: 100%;
+          border-bottom: 1px solid #eee;
+        }
+
+        .btn-login {
+          margin-top: 10px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="180" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Courses</a>
+            </li>
+
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./hirepage.html">Hire From Us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.skillwaala.com/">Blog</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Job Search</a>
+            </li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container py-4">
+        <!-- Back Link -->
+        <a href="./interviewblog.html" class="back-link"
+          ><i class="bi bi-arrow-left"></i> Back to Levels</a
+        >
+
+        <!-- Page Heading -->
+        <h4 class="text-center mb-4">
+          Choose Your SMO
+          <span class="text-danger">Interview Blogs & Articles</span>
+        </h4>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+          <div class="hero-icon"><i class="bi bi-filetype-txt"></i></div>
+          <div class="hero-text">
+            <h5>SMO</h5>
+            <p>5 Article available</p>
+            <span class="badge rounded-pill text-bg-success">Beginner</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container py-4 article">
+      <div class="row g-4">
+        <!-- LEFT MENU -->
+        <div class="col-md-3">
+          <div class="left-menu shadow-sm" id="menuList">
+            <div class="item active" data-target="article1">
+              Article 1<br /><small>Social Media Optimization 101 video</small>
+            </div>
+            <div class="item" data-target="article2">
+              Article 2<br /><small>Getting Started with SEO</small>
+            </div>
+            <div class="item" data-target="article3">
+              Article 3<br /><small>Understanding Keywords</small>
+            </div>
+            <div class="item" data-target="article4">
+              Article 4<br /><small>Meta Tags and Impact</small>
+            </div>
+            <div class="item" data-target="article5">
+              Article 5<br /><small>Everyone Can Watch</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="col-md-9">
+          <div class="content-box shadow-sm" id="contentBox">
+            <!-- DEFAULT CONTENT -->
+            <div id="article1" class="content active">
+              <h3>How to Start a Blog in 20 Minutes</h3>
+              <p>Create a Blog in 20 Minutes<br />Updated November 1st, 2025</p>
+              <p>
+                Are you looking for an easy guide on how to start a blog?...
+              </p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+                pariatur provident, perspiciatis recusandae qui perferendis
+                ipsum in eaque sit deleniti quibusdam autem officia ducimus iste
+                aliquam nostrum quos consequuntur. Eum molestiae consectetur
+                eaque voluptatibus veritatis ab officia recusandae, dicta non
+                voluptates sapiente laudantium reprehenderit consequatur
+                accusamus. Quod soluta, nostrum iure ipsam sed culpa sint
+                explicabo nesciunt magni laborum libero eligendi itaque
+                excepturi possimus saepe omnis molestiae. Assumenda doloremque
+                eum mollitia veniam veritatis? A repudiandae, corporis,
+                voluptatem architecto sit, reprehenderit nam similique optio
+                vero excepturi ad ipsa. Assumenda eum officiis sapiente
+                obcaecati impedit saepe quibusdam, reprehenderit deleniti,
+                voluptatum dolores doloribus dolor facilis labore eligendi
+                tempora similique porro veniam, nemo aliquam ipsam molestiae
+                dolorem. Recusandae, animi ea ipsum accusamus nam beatae
+                eligendi maxime quidem sint vero illum explicabo quia nemo
+                repellat minima ducimus inventore est reiciendis id possimus
+                minus laudantium aut. Dolor voluptatum corporis vero rerum cum
+                facere, dolore, ratione sunt perspiciatis aperiam inventore
+                tempora rem? Eveniet ducimus mollitia, expedita ipsam unde
+                doloremque, sequi numquam ipsa itaque dolore obcaecati, incidunt
+                explicabo natus! Maxime, nam ex! Corrupti, enim sapiente
+                deserunt pariatur error facere explicabo. Ab facere consequatur
+                ad, quibusdam cumque omnis voluptas fuga a minus nihil obcaecati
+                quia accusamus itaque delectus adipisci molestias, deleniti
+                perferendis consequuntur sunt veritatis possimus optio nisi
+                labore. Modi dignissimos ratione voluptatibus suscipit
+                veritatis, qui, at inventore similique neque exercitationem
+                incidunt, debitis iure dolores itaque rerum illo minus sapiente
+                officiis quaerat error veniam. Quo harum ratione consequuntur
+                iste necessitatibus odit corporis perferendis ipsum labore
+                possimus eius itaque, facere inventore dolor alias quaerat
+                tenetur, quidem non, repudiandae enim. Reiciendis iusto error
+                accusantium, eius dignissimos nobis beatae culpa illo molestiae
+                libero voluptatem itaque! Aliquid fugit sint officiis, nesciunt
+                velit accusamus tempora cumque deserunt aliquam iusto est unde,
+                quam cum debitis eligendi dolorem enim dicta ab odit? Sapiente
+                necessitatibus similique maxime ex molestiae inventore deleniti.
+                Quis nam, tempore id corporis architecto, dicta molestiae
+                consectetur beatae velit ipsa pariatur blanditiis voluptas harum
+                et, sint eius a est porro tenetur eligendi necessitatibus neque
+                ab! Sit perferendis, rem repellendus aliquid doloribus
+                reiciendis adipisci consequatur commodi officia ipsam id
+                deserunt nesciunt suscipit necessitatibus corporis odit at
+                accusantium. Delectus, provident, ratione aliquid iste corrupti
+                natus explicabo maxime facere beatae illo repellat in,
+                aspernatur distinctio doloribus. Eveniet suscipit sequi est!
+                Repudiandae modi vero id et molestias ipsa itaque, odit nihil ab
+                voluptatem reprehenderit, harum voluptatibus! Velit amet
+                voluptas quis nisi labore reiciendis laboriosam harum architecto
+                impedit nobis earum, molestiae fugiat vero laudantium ex est
+                debitis? Tenetur enim culpa facilis sit reprehenderit dolor at
+                maiores nam exercitationem incidunt labore ea sequi nemo nobis
+                quos, molestiae totam doloremque aliquid doloribus suscipit
+                possimus. Facilis aliquid adipisci autem sapiente natus ipsa
+                ratione iure vitae eligendi quos tenetur, reprehenderit illo at
+                eaque minus praesentium earum voluptas necessitatibus officiis
+                eius dolorum! Tempore, temporibus nisi illo ex aperiam odio
+                nulla, natus quo dolore, facere commodi? Ipsa nobis id vitae
+                consequuntur architecto repellendus repellat, placeat
+                praesentium nemo exercitationem? Nam debitis aliquid aliquam
+                explicabo nihil dolores id molestias quidem quam quasi,
+                doloremque rerum recusandae, necessitatibus accusantium
+                dignissimos unde suscipit quia quibusdam eos neque tempora ipsa
+                assumenda tempore? Consequatur, at, laboriosam ratione beatae
+                obcaecati repudiandae libero eaque est laudantium exercitationem
+                rerum ut deserunt voluptates illo magnam dolorum quasi laborum!
+                Doloribus, sunt? Ullam accusamus, corrupti et laudantium facilis
+                sequi cumque labore neque molestiae quos maxime soluta eum!
+                Voluptatum fugiat enim tempora asperiores ratione sint? Repellat
+                sapiente accusamus quidem voluptate culpa perferendis beatae
+                nisi ullam est ipsa, optio repudiandae quam reprehenderit,
+                tempore exercitationem quas voluptatibus adipisci itaque
+                voluptates assumenda qui, ipsam aperiam pariatur! Corporis sint
+                fugit fugiat aperiam est voluptates voluptate, doloribus
+                eveniet, numquam veniam, provident consectetur delectus quasi
+                aspernatur quaerat cumque accusamus dolorem rem aliquid odit
+                accusantium consequatur. Nobis cumque fugit voluptatum corporis.
+                Pariatur blanditiis placeat laboriosam iste provident rerum odit
+                soluta porro similique natus impedit vitae accusamus,
+                reprehenderit unde neque dicta nihil consequuntur corrupti,
+                asperiores ratione repudiandae facilis non ipsam. Placeat
+                dolores earum, sapiente dolore cumque laudantium accusamus omnis
+                nobis maiores ipsam libero porro illum, aliquid quibusdam. Eius,
+                excepturi? Animi, distinctio dicta rerum totam quod aut. Minus
+                repellat eaque architecto quo veniam nostrum libero incidunt et
+                sed pariatur, itaque sit deleniti officia quibusdam non
+                consectetur explicabo a dolorem facere veritatis exercitationem
+                quam. Quo deleniti exercitationem iusto recusandae in. Ad
+                numquam aliquam quaerat dignissimos iure. Exercitationem dolores
+                quo distinctio quia ut saepe ab adipisci ipsam eius
+                reprehenderit, cum facere aut odit ipsum ad debitis repellendus
+                accusantium repellat facilis alias mollitia! Veniam fugiat ex
+                qui labore rem ad velit nisi, voluptas, saepe repudiandae totam
+                eos fuga iste provident ipsum aliquid sint soluta consectetur
+                possimus quae. Quo cum ex necessitatibus dignissimos voluptatem
+                unde veniam voluptate minus adipisci nobis optio saepe earum
+                totam dolore culpa alias ad, veritatis, nesciunt, repudiandae
+                ullam rerum! Aperiam rerum adipisci mollitia qui alias vel eum
+                necessitatibus ducimus optio sequi commodi deleniti libero neque
+                quas eveniet dolorum, quaerat aliquam illum quis enim. Esse
+                sequi quo animi nemo vitae quas odit porro modi dolorem, facere,
+                magnam at rem nisi placeat quod! Ea in, voluptate, excepturi
+                dolor culpa enim veritatis illo molestiae sunt accusantium magni
+                quis incidunt, voluptatum eligendi cumque labore quibusdam
+                praesentium! Voluptatem odit doloribus, atque iure corporis amet
+                cum modi aut et porro hic nesciunt quae praesentium molestias
+                accusamus quis laborum quidem consequuntur aliquid minima ipsam.
+                Fuga, quibusdam tempora! Velit nulla eveniet perferendis facilis
+                sint ullam! Ratione totam nostrum molestiae saepe eveniet,
+                minima facere quod? Labore illum, ipsam dicta eveniet sapiente
+                veniam reiciendis ullam dolor. Laudantium eaque saepe, adipisci
+                vitae corrupti minus cupiditate cum labore magnam assumenda
+                distinctio non soluta libero quaerat reprehenderit! Explicabo
+                maiores cum veniam soluta porro saepe magnam commodi vel dolores
+                odit, id velit laboriosam excepturi aliquam aperiam omnis modi
+                delectus? Fugiat dolore harum quod sequi quam cupiditate aliquam
+                sapiente distinctio vero blanditiis minus, neque nobis odit
+                dolor voluptates. Minima, officia! Est nisi odio incidunt
+                inventore sit possimus architecto omnis doloremque ipsam laborum
+                voluptates magnam tempore nobis qui consequatur ipsa dolorum,
+                voluptas reprehenderit praesentium ducimus tempora. Excepturi
+                deserunt quibusdam voluptatum perferendis quidem mollitia. Magni
+                dicta accusamus soluta ab, minus doloribus quidem inventore
+                cupiditate molestias dolor.
+              </p>
+            </div>
+
+            <div id="article2" class="content d-none">
+              <h3>Getting Started With SEO</h3>
+              <p>Beginner friendly guide to understand SEO basics...</p>
+            </div>
+
+            <div id="article3" class="content d-none">
+              <h3>Understanding Keywords: Foundation of SEO</h3>
+              <p>Learn how keywords work and how to use them effectively...</p>
+            </div>
+
+            <div id="article4" class="content d-none">
+              <h3>Meta Tags & Their Impact on SEO</h3>
+              <p>Meta tags are essential to search engine ranking...</p>
+            </div>
+
+            <div id="article5" class="content d-none">
+              <h3>Everyone Can Watch Your Video</h3>
+              <p>How to optimize videos for maximum reach...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Register Box Section -->
+            <section class="register-section">
+              <h2>Skillwaala Free Training Program</h2>
+              <p>Kickstart your Career with Skillwaala.</p>
+              <a href="#internship" class="btn">Register Now</a>
+            </section>
+          </div>
+        </div>
+        <div class="row g-4 footer-main">
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-12 footer-logo">
+            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+
+            <p class="m-2"></p>
+            <p><strong>Social Links:</strong></p>
+            <a href="https://www.facebook.com/skillwaala/"
+              ><i
+                class="bi bi-facebook bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.instagram.com/skillwaala"
+              ><i
+                class="bi bi-instagram bg-danger px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.linkedin.com/company/skillwaala/"
+              ><i
+                class="bi bi-linkedin bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a
+              href="https://api.whatsapp.com/send/?phone=917766967799&text=Hello+SkillWaala+Team&type=phone_number&app_absent"
+              ><i
+                class="bi bi-whatsapp bg-success px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+
+            <p><strong>Email:</strong>hro@skillwaala.com</p>
+            <p>
+              <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+              Scheme, Triveni Nagar Jaipur, 302018
+            </p>
+            <p><strong>Contact:</strong>+91 7766967799</p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/about-us">About Us</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/web-stories">Web Stories</a>
+              </li>
+              <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/privacy-policy"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+              </li>
+              <li><a href="https://www.skillwaala.com/gallery">Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-4 col-md-12 footer-column">
+            <h3>Trending Courses</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <ul>
+                  <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                  <li><a href="./contentwriting.html">Content Writing </a></li>
+                  <li><a href="./seo.html">SEO Course </a></li>
+                  <li>
+                    <a href="./socialmediamarketing.html"
+                      >Social Media Marketing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./webbatch.html">Full-Stack Web Development </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-6">
+                <ul>
+                  <li>
+                    <a href="./performancemarketing.html"
+                      >Performance Marketing
+                    </a>
+                  </li>
+                  <li><a href="./englishcourse.html">English Spoken </a></li>
+                  <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                  <li><a href="./videoediting.html">Video Editing </a></li>
+                  <li><a href="./2danimation.html">2D Animation </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Training Program</h3>
+            <ul>
+              <li><a href="./hirepage.html">Digital Marketing </a></li>
+              <li><a href="./hirepage.html">Content Writing </a></li>
+              <li><a href="./hirepage.html">Animation </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-contacts">
+        <p>Business No: +91 7766967799</p>
+        <p>Email: hro@skillwaala.com</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+        const buttons = document.querySelectorAll('#menuList .item');
+        const contents = document.querySelectorAll('.content');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Active class change
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Content change
+                const target = btn.getAttribute('data-target');
+                contents.forEach(c => c.classList.add('d-none'));
+                document.getElementById(target).classList.remove('d-none');
+            });
+        });
+    </script>
+  </body>
+</html>

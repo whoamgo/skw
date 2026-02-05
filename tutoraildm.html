@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial DM</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .navbar {
+        background: #fff;
+        padding: 10px 25px;
+        box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 18%);
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        z-index: 2000;
+      }
+
+      .dropbtn {
+        background-color: #fff;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        color: #f26434;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .custom-nav {
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        padding: 2px 10px;
+        margin: 2px;
+      }
+
+      .custom-nav .nav-link {
+        font-weight: 500;
+        color: #333;
+        padding: 6px 12px;
+      }
+
+      .custom-nav .nav-link:hover {
+        color: #f26434;
+      }
+
+      .custom-nav .divider {
+        color: #f26434;
+        font-size: 20px;
+        margin: 0 6px;
+      }
+
+      .btn-login {
+        border: 1px solid #f36f45;
+        color: #f36f45;
+        border-radius: 10px;
+        padding: 6px 18px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .btn-login:hover {
+        background: #f36f45;
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        .custom-nav {
+          border: none;
+          border-radius: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 0;
+        }
+
+        .custom-nav .divider {
+          display: none;
+        }
+
+        .custom-nav .nav-link {
+          padding: 10px;
+          width: 100%;
+          border-bottom: 1px solid #eee;
+        }
+
+        .btn-login {
+          margin-top: 10px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        background-image: linear-gradient(to bottom, #e80106, #f24f1e);
+        color: white;
+      }
+
+      .hero-card {
+        padding: 40px 40px;
+        max-width: 80%;
+        width: 100%;
+        background-size: 40px 40px;
+        position: relative;
+      }
+
+      .hero-card h1 {
+        font-weight: 700;
+        color: #ddd;
+        font-size: 3.5rem;
+      }
+
+      .hero-card h2 {
+        font-weight: 500;
+        color: #fff7f7;
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+      }
+
+      .hero-card p {
+        color: #ddd;
+        font-size: 1.5rem;
+        margin-bottom: 35px;
+        line-height: 1.6;
+      }
+
+      /* Right Image */
+      .hero-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-learn {
+        background-color: white;
+        font-weight: 600;
+        border-radius: 25px;
+        padding: 7px 80px;
+        border: none;
+        transition: all 0.3s;
+      }
+
+      .btn-learn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 80, 0, 0.4);
+      }
+
+      h3.section-title {
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      .courses-section {
+        padding: 60px 0;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(to bottom, #fde7e7, #ff5722);
+        font-family: "Poppins", sans-serif;
+      }
+
+      .courses-section h2 {
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .slider {
+        display: flex;
+        gap: 30px;
+        animation: scroll 15s linear infinite;
+      }
+
+      .slider:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .topics-box {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .topics-box h5 {
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .topics-box ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .topics-box li {
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .topics-box li:hover,
+      .topics-box li.active {
+        background: #ff6a00;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .cta-box {
+        background: linear-gradient(135deg, #ff6a00, #ff9340);
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        padding: 0px 20px;
+      }
+
+      .cta-box h5 {
+        font-weight: bold;
+        padding: 56px;
+      }
+
+      .cta-box img {
+        width: 100%;
+        max-width: 350px;
+        margin-top: 20px;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: #ff6a00;
+        color: white;
+      }
+
+      .accordion-item {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        margin-bottom: 15px;
+      }
+
+      .accordion-body a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .accordion-body a:hover {
+        color: #ff6a00;
+      }
+
+      @media (max-width: 992px) {
+        .left-col {
+          margin-bottom: 30px;
+        }
+      }
+
+      .course-card {
+        flex: 0 0 300px;
+        border-radius: 15px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .course-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .course-img {
+        width: 100%;
+        height: 160px;
+        background: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg")
+          center/cover;
+        position: relative;
+      }
+
+      .live-tag {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #ff4500;
+        color: white;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .course-content {
+        padding: 15px;
+      }
+
+      .course-content h5 {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .course-content p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .facebook-btn {
+        background: #1877f2;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 5px;
+      }
+
+      .register-section {
+        background: linear-gradient(135deg, #5c2dab, #7d4ed1);
+        color: #fff;
+        border-radius: 15px;
+        text-align: center;
+        padding: 40px 20px;
+        margin: 30px auto;
+        max-width: 90%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .register-section h2 {
+        font-size: 45px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .register-section p {
+        font-size: 16px;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .register-section .btn {
+        background: linear-gradient(90deg, #ff6600, #ff0000);
+        border: none;
+        padding: 12px 30px;
+        font-size: 18px;
+        border-radius: 8px;
+        color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      .register-section .btn:hover {
+        opacity: 0.85;
+      }
+
+      footer {
+        background: linear-gradient(to bottom, #ffffff, #ffbbac);
+        color: #333;
+        font-family: "Poppins", sans-serif;
+      }
+
+      footer .footer-main {
+        max-width: 90%;
+        margin: auto;
+      }
+
+      .footer-logo img {
+        width: 200px;
+        margin-bottom: 10px;
+      }
+
+      .footer-logo p {
+        font-size: 14px;
+        margin: 4px 0;
+        color: #444;
+      }
+
+      .footer-logo a {
+        color: #e65a29;
+        text-decoration: none;
+        margin: 0 4px;
+        font-size: 14px;
+      }
+
+      .footer-logo a:hover {
+        color: #ff5722;
+      }
+
+      .footer-column {
+        background: #ffe9e1;
+        border-radius: 15px;
+        padding: 25px 20px;
+        margin-right: 10px;
+      }
+
+      .footer-column h3 {
+        background: #f6d5c4;
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .footer-column ul {
+        list-style: none;
+
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .footer-column ul li {
+        margin: 8px 0;
+      }
+
+      .footer-column ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      .footer-column ul li a:hover {
+        color: #ff5722;
+      }
+
+      .footer-bottom {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 30px;
+        width: 100%;
+      }
+
+      .footer-contacts {
+        background: #ff5722;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 12px 80px;
+        font-size: 14px;
+      }
+
+      .footer-bottom p {
+        text-align: center;
+      }
+
+      .footer-contacts p {
+        margin: 0;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .slider {
+          animation: scroll 20s linear infinite;
+        }
+        .course-card {
+          flex: 0 0 240px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .course-card {
+          flex: 0 0 200px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .custom-card {
+          margin-bottom: 25px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-card {
+          padding: 40px 25px;
+        }
+
+        .hero-card h1 {
+          font-size: 1.9rem;
+        }
+
+        .hero-card h2 {
+          font-size: 1.1rem;
+        }
+
+        .hero-card p {
+          font-size: 0.95rem;
+        }
+
+        .btn-learn,
+        .btn-outline {
+          padding: 10px 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-card {
+          text-align: center;
+        }
+
+        .btn-group {
+          flex-direction: column;
+        }
+
+        .btn-group button {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="180" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Courses</a>
+            </li>
+
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./hirepage.html">Hire From Us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.skillwaala.com/">Blog</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Job Search</a>
+            </li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="hero-card">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1>Master Digital Marketing — Learn, Build, Grow</h1>
+
+            <p>
+              A complete guide to mastering SEQ social media, ads, and marketing
+              automation.
+            </p>
+            <div class="">
+              <a href="./course.html"
+                ><button class="btn-learn">Take Course</button></a
+              >
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="col-lg-4 text-center mt-4 mt-lg-0">
+            <img
+              src="https://img.freepik.com/premium-vector/word-cloud-background-concept-workshop-business-training-seminar-employee-brainstorming-information-concept-vector-illustration_616200-4488.jpg"
+              alt="Learning Illustration"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container py-5" style="max-width: 80%;">
+      <div class="row">
+        <!-- LEFT SIDE -->
+        <div class="col-lg-4 left-col">
+          <div class="topics-box">
+            <h5>Topics</h5>
+            <ul>
+              <li class="active" onclick="showModule('seo')">SEO</li>
+              <li onclick="showModule('smm')">Social Media Marketing</li>
+              <li onclick="showModule('ads')">Google Ads</li>
+              <li onclick="showModule('email')">Email Marketing</li>
+            </ul>
+          </div>
+
+          <div class="cta-box">
+            <h5>
+              Take your first step towards becoming a certified Digital
+              Marketer.
+            </h5>
+            <img
+              src="./media/simple-computer-laptop-isolated.png"
+              alt="Laptop"
+            />
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="col-lg-8">
+          <!-- SEO MODULE -->
+          <div id="seo" class="module-section">
+            <div class="accordion" id="seoAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                  >
+                    Module 1 - Search Engine Optimization
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="page1.html" target="_blank"
+                          >Introduction to SEO</a
+                        >
+                      </li>
+                      <li>
+                        <a href="page2.html" target="_blank"
+                          >On-page Optimization</a
+                        >
+                      </li>
+                      <li>
+                        <a href="page3.html" target="_blank">Off-page SEO</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                  >
+                    Module 2 - Keyword Research
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="page4.html" target="_blank">Keyword Tools</a>
+                      </li>
+                      <li>
+                        <a href="page5.html" target="_blank"
+                          >Competitor Analysis</a
+                        >
+                      </li>
+                      <li>
+                        <a href="page6.html" target="_blank"
+                          >Long-tail Keywords</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OTHER MODULES -->
+          <div id="smm" class="module-section d-none">
+            <div class="accordion" id="smmAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#smmOne"
+                  >
+                    Module 1 - Social Media Basics
+                  </button>
+                </h2>
+                <div id="smmOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="fb.html" target="_blank">Facebook Marketing</a>
+                      </li>
+                      <li>
+                        <a href="insta.html" target="_blank"
+                          >Instagram Marketing</a
+                        >
+                      </li>
+                      <li>
+                        <a href="linkedin.html" target="_blank"
+                          >LinkedIn Strategy</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="ads" class="module-section d-none">
+            <div class="accordion" id="adsAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adsOne"
+                  >
+                    Module 1 - Google Ads Overview
+                  </button>
+                </h2>
+                <div id="adsOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="introads.html" target="_blank">Intro to Ads</a>
+                      </li>
+                      <li>
+                        <a href="campaigns.html" target="_blank"
+                          >Campaign Setup</a
+                        >
+                      </li>
+                      <li>
+                        <a href="metrics.html" target="_blank"
+                          >Performance Metrics</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="email" class="module-section d-none">
+            <div class="accordion" id="emailAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#emailOne"
+                  >
+                    Module 1 - Email Marketing Fundamentals
+                  </button>
+                </h2>
+                <div id="emailOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="introemail.html" target="_blank"
+                          >Email Tools</a
+                        >
+                      </li>
+                      <li>
+                        <a href="template.html" target="_blank"
+                          >Template Design</a
+                        >
+                      </li>
+                      <li>
+                        <a href="automation.html" target="_blank"
+                          >Email Automation</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="courses-section">
+      <div class="container">
+        <h2>Discover More Courses on Skillwaala</h2>
+        <div class="slider d-flex">
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Digital Marketing</h5>
+              <p>
+                Learn everything from SEO, Google Ads, and Social Media
+                Marketing to AI-powered marketing strategies.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Content Writing</h5>
+              <p>
+                Master the art of storytelling, brand voice, and persuasive
+                writing with hands-on content marketing tools and frameworks .
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Animation Mastery Course</h5>
+              <p>
+                Bring your creativity to life with 2D Animation, motion
+                graphics, and video storytelling using industry-standard tools.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Full-Stack Web Development Program</h5>
+              <p>
+                Go from beginner to pro with a complete roadmap covering HTML,
+                CSS, JavaScript, React, Node.js, and backend integration.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>English Speaking</h5>
+              <p>
+                Interactive lessons and quizzes that make English learning easy
+                and fun.
+              </p>
+            </div>
+          </a>
+
+          <!-- Duplicate cards for seamless scrolling -->
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Digital Marketing</h5>
+              <p>
+                Learn everything from SEO, Google Ads, and Social Media
+                Marketing to AI-powered marketing strategies.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Register Box Section -->
+            <section class="register-section">
+              <h2>Skillwaala Free Training Program</h2>
+              <p>Kickstart your Career with Skillwaala.</p>
+              <a href="#internship" class="btn">Register Now</a>
+            </section>
+          </div>
+        </div>
+        <div class="row g-4 footer-main">
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-12 footer-logo">
+            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+
+            <p class="m-2"></p>
+            <p><strong>Social Links:</strong></p>
+            <a href="https://www.facebook.com/skillwaala/"
+              ><i
+                class="bi bi-facebook bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.instagram.com/skillwaala"
+              ><i
+                class="bi bi-instagram bg-danger px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.linkedin.com/company/skillwaala/"
+              ><i
+                class="bi bi-linkedin bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a
+              href="https://api.whatsapp.com/send/?phone=917766967799&text=Hello+SkillWaala+Team&type=phone_number&app_absent"
+              ><i
+                class="bi bi-whatsapp bg-success px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+
+            <p><strong>Email:</strong>hro@skillwaala.com</p>
+            <p>
+              <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+              Scheme, Triveni Nagar Jaipur, 302018
+            </p>
+            <p><strong>Contact:</strong>+91 7766967799</p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/about-us">About Us</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/web-stories">Web Stories</a>
+              </li>
+              <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/privacy-policy"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+              </li>
+              <li><a href="https://www.skillwaala.com/gallery">Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-4 col-md-12 footer-column">
+            <h3>Trending Courses</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <ul>
+                  <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                  <li><a href="./contentwriting.html">Content Writing </a></li>
+                  <li><a href="./seo.html">SEO Course </a></li>
+                  <li>
+                    <a href="./socialmediamarketing.html"
+                      >Social Media Marketing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./webbatch.html">Full-Stack Web Development </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-6">
+                <ul>
+                  <li>
+                    <a href="./performancemarketing.html"
+                      >Performance Marketing
+                    </a>
+                  </li>
+                  <li><a href="./englishcourse.html">English Spoken </a></li>
+                  <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                  <li><a href="./videoediting.html">Video Editing </a></li>
+                  <li><a href="./2danimation.html">2D Animation </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Training Program</h3>
+            <ul>
+              <li><a href="./hirepage.html">Digital Marketing </a></li>
+              <li><a href="./hirepage.html">Content Writing </a></li>
+              <li><a href="./hirepage.html">Animation </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-contacts">
+        <p>Business No: +91 7766967799</p>
+        <p>Email: hro@skillwaala.com</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS to handle topic click -->
+    <script>
+      function showModule(topic) {
+        document
+          .querySelectorAll(".topics-box li")
+          .forEach((li) => li.classList.remove("active"));
+        event.target.classList.add("active");
+        document
+          .querySelectorAll(".module-section")
+          .forEach((section) => section.classList.add("d-none"));
+        document.getElementById(topic).classList.remove("d-none");
+      }
+    </script>
+  </body>
+</html>

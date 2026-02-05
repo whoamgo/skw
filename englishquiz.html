@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Quiz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="./css/englishquiz.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="180" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Courses</a>
+            </li>
+
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./hirepage.html">Hire From Us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.skillwaala.com/">Blog</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Job Search</a>
+            </li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="hero-card">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1>
+              Test Your <span class="learingtext"> English Mastery </span>
+            </h1>
+
+            <p>
+              Challenge your writing skills with SkillSpace’s Content Writing
+              Quiz, designed by industry experts to evaluate your grasp of
+              grammar, storytelling, SEO writing, and professional content
+              creation.
+            </p>
+            <div class="btn-group d-flex gap-3 flex-wrap">
+              <a href="./quiztest.html"
+                ><button class="btn-learn">Start Quiz</button></a
+              >
+              <a href="./course.html"
+                ><button class="btn-outline">Explore All Courses</button></a
+              >
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="col-lg-4 text-center mt-4 mt-lg-0">
+            <img
+              src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI="
+              alt="Learning Illustration"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="startquiz">
+      <div class="quiz-container">
+        <div class="quiz-header">
+          <h2>English Quiz</h2>
+          <i class="bi bi-lightbulb"></i>
+        </div>
+        <p>
+          So, what are you waiting for? Click the "Start Quiz" button and get
+          started!
+        </p>
+
+        <div class="quiz-info">
+          <div><span>31</span> Total Number of Questions</div>
+          <div><span>20 Min</span> Total Time for Questions</div>
+        </div>
+        <div class="text-end">
+          <a href="./quiztest.html"
+            ><button class="btn-start">Start Quiz</button></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section">
+      <h3>Benefits of Taking the SkillSpace Quiz</h3>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Identify Your Strengths</div>
+        <p>
+          This quiz helps you pinpoint which areas you naturally excel in. It
+          will help you plan your learning journey more strategically.
+        </p>
+        <div class="benefit-divider"></div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Bridge Knowledge Gaps</div>
+        <p>
+          Even if you have taken a course or worked in these fields, there are
+          always blind spots. The quiz reveals where your understanding can be
+          improved, helping you focus on the right upskilling areas.
+        </p>
+        <div class="benefit-divider"></div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Benchmark Against Industry Standards</div>
+        <p>
+          Each quiz question is designed to reflect real industry practices, not
+          textbook theory. By attempting the quiz, you will know how your skill
+          level compares with that of industry professionals.
+        </p>
+        <div class="benefit-divider"></div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Prepare for Job Interviews</div>
+        <p>
+          Many recruiters assess practical knowledge. The SkillSpace quiz lets
+          you rehearse interview-style questions, giving you an extra edge in
+          placements and internships.
+        </p>
+        <div class="benefit-divider"></div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-title">Learn, Compete, and Grow</div>
+        <p>
+          With gamified learning elements, this quiz transforms traditional
+          testing into an engaging challenge. Compare your score with others,
+          climb the leaderboard, and enjoy the thrill of learning with
+          competition.
+        </p>
+      </div>
+    </section>
+
+    <section class="courses-section">
+      <div class="container">
+        <h2>Discover More Courses on Skillwaala</h2>
+        <div class="slider d-flex">
+          <a
+            href="./dmbatch.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Digital Marketing</h5>
+              <p>
+                Learn everything from SEO, Google Ads, and Social Media
+                Marketing to AI-powered marketing strategies.
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="./contentwriting.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Content Writing</h5>
+              <p>
+                Master the art of storytelling, brand voice, and persuasive
+                writing with hands-on content marketing tools and frameworks .
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="./animationbatch.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Animation Mastery Course</h5>
+              <p>
+                Bring your creativity to life with 2D Animation, motion
+                graphics, and video storytelling using industry-standard tools.
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="./webbatch.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Full-Stack Web Development Program</h5>
+              <p>
+                Go from beginner to pro with a complete roadmap covering HTML,
+                CSS, JavaScript, React, Node.js, and backend integration.
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="./englishcourse.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>English Speaking</h5>
+              <p>
+                Interactive lessons and quizzes that make English learning easy
+                and fun.
+              </p>
+            </div>
+          </a>
+
+          <!-- Duplicate cards for seamless scrolling -->
+          <a
+            href="./dmbatch.html"
+            class="course-card text-decoration-none text-dark"
+          >
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Digital Marketing</h5>
+              <p>
+                Learn everything from SEO, Google Ads, and Social Media
+                Marketing to AI-powered marketing strategies.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--FAQ SECTION START -->
+    <section class="faq-section-2" id="faq2">
+      <div class="container-fluid">
+        <h2>FAQ (Frequently Asked Questions)</h2>
+
+        <div class="faq-box-2">
+          <div class="accordion" id="faqAccordion2">
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q1-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a1-2"
+                >
+                  Q1. What are these quizzes for?
+                </button>
+              </h2>
+              <div
+                id="a1-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. These quizzes are designed to help students and
+                  professionals test and enhance their digital skills through
+                  fun, gamified challenges
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q2-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a2-2"
+                >
+                  Q2. Are the SkillSpace quizzes free to attempt?
+                </button>
+              </h2>
+              <div
+                id="a2-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Yes, all quizzes are completely free to access. You can
+                  attempt them anytime, track your score, and even retake
+                  quizzes to improve your performance.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q3-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a3-2"
+                >
+                  Q3. Who should take these quizzes?
+                </button>
+              </h2>
+              <div
+                id="a3-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Skillspace quizzes are perfect for students, job seekers,
+                  freelancers, and working professionals who want to benchmark
+                  their skills in Digital Marketing, Content Writing, Animation,
+                  and Web Development.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q4-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a4-2"
+                >
+                  Q4. Will these quizzes help in career growth?
+                </button>
+              </h2>
+              <div
+                id="a4-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Yes, our quizzes are designed to help you identify
+                  strengths and weaknesses, guiding you toward the right
+                  Skillwaala courses and workshops to grow your career.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item-2">
+              <h2 class="accordion-header" id="q5-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a5-2"
+                >
+                  Q5. Can I get a certificate after completing the quizzes?
+                </button>
+              </h2>
+              <div
+                id="a5-2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion2"
+              >
+                <div class="accordion-body-2">
+                  Ans. Currently, SkillSpace quizzes focus on practical learning
+                  and assessment. Certificates are offered for Skillwaala’s main
+                  courses and workshops.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Register Box Section -->
+            <section class="register-section">
+              <h2>Skillwaala Free Training Program</h2>
+              <p>Kickstart your Career with Skillwaala.</p>
+              <a href="#internship" class="btn">Register Now</a>
+            </section>
+          </div>
+        </div>
+        <div class="row g-4 footer-main">
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-12 footer-logo">
+            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+
+            <p class="m-2"></p>
+            <p><strong>Social Links:</strong></p>
+            <a href="https://www.facebook.com/skillwaala/"
+              ><i
+                class="bi bi-facebook bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.instagram.com/skillwaala"
+              ><i
+                class="bi bi-instagram bg-danger px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.linkedin.com/company/skillwaala/"
+              ><i
+                class="bi bi-linkedin bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a
+              href="https://api.whatsapp.com/send/?phone=917766967799&text=Hello+SkillWaala+Team&type=phone_number&app_absent"
+              ><i
+                class="bi bi-whatsapp bg-success px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+
+            <p><strong>Email:</strong>hro@skillwaala.com</p>
+            <p>
+              <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+              Scheme, Triveni Nagar Jaipur, 302018
+            </p>
+            <p><strong>Contact:</strong>+91 7766967799</p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/about-us">About Us</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/web-stories">Web Stories</a>
+              </li>
+              <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/privacy-policy"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+              </li>
+              <li><a href="https://www.skillwaala.com/gallery">Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-4 col-md-12 footer-column">
+            <h3>Trending Courses</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <ul>
+                  <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                  <li><a href="./contentwriting.html">Content Writing </a></li>
+                  <li><a href="./seo.html">SEO Course </a></li>
+                  <li>
+                    <a href="./socialmediamarketing.html"
+                      >Social Media Marketing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./webbatch.html">Full-Stack Web Development </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-6">
+                <ul>
+                  <li>
+                    <a href="./performancemarketing.html"
+                      >Performance Marketing
+                    </a>
+                  </li>
+                  <li><a href="./englishcourse.html">English Spoken </a></li>
+                  <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                  <li><a href="./videoediting.html">Video Editing </a></li>
+                  <li><a href="./2danimation.html">2D Animation </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Training Program</h3>
+            <ul>
+              <li><a href="./hirepage.html">Digital Marketing </a></li>
+              <li><a href="./hirepage.html">Content Writing </a></li>
+              <li><a href="./hirepage.html">Animation </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-contacts">
+        <p>Business No: +91 7766967799</p>
+        <p>Email: hro@skillwaala.com</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

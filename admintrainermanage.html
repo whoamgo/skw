@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Trainer Dashboard</title>
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/admintrainermanage.css" />
+  </head>
+  <body>
+ <!-- ✅ SIDEBAR -->
+    <div class="sidebar">
+      <div class="brand">
+        <i class="fa-solid fa-user"></i>
+        <span>Admin</span>
+      </div>
+      <nav class="nav flex-column">
+        <a class="nav-link active" href="./admin.html" data-title="Dashboard">
+          <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./admintotalstudents.html"
+          data-title="Total Student Enroll"
+        >
+          <i class="fa-solid fa-user-check me-1"></i>
+          <span>Total Student Enroll</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./adminbatchcount.html"
+          data-title="Active Courses Count"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Active Courses Count</span>
+        </a>
+        <a class="nav-link" href="./adminnotification.html" data-title="All Community Quarry">
+          <i class="fa-solid fa-comments me-1"></i
+          ><span>All Community Quarry</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./admintrainermanage.html"
+          data-title="Trainer Dashboard"
+        >
+          <i class="fa-solid fa-users me-1"></i><span>Trainer Dashboard</span>
+        </a>
+
+        <a
+          class="nav-link"
+          href="./adminhiringportal.html"
+          data-title="Hiring Portal"
+        >
+          <i
+            class="fa-solid fa-arrows-down-to-people me-1"
+          ></i><span>Hiring Portal</span>
+        </a>
+
+        <hr />
+        <div class="m-2">Account</div>
+        <a class="nav-link" href="./index.html" data-title="Logout">
+          <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
+        </a>
+        <a
+          class="nav-link"
+          href="https://www.skillwaala.com/contact-us"
+          data-title="Support"
+        >
+          <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
+        </a>
+      </nav>
+    </div>
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="sidebar-toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand fw-bold mx-auto" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="130" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+     
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container-fluid p-3 p-md-4">
+        <div class="topbar">
+          <h6 class="mb-0 text-muted">Home / Trainer Dashboard</h6>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <i class="bi bi-bell fs-5"></i>
+          </div>
+        </div>
+
+        <div class="profile-hero mt-3">
+          <div class="profile-left">
+            <img
+              src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
+              class="profile-avatar"
+            />
+            <div>
+              <h6 class="mb-0 fs-2">Admin</h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header -->
+        <div
+          class="d-flex justify-content-between align-items-center mb-4 mt-4"
+        >
+          <div>
+            <h4 class="fw-bold">Instructor Management</h4>
+            <p class="text-muted small">Add and manage instructors</p>
+          </div>
+
+          <a href="./adminaddtrainer.html"
+            ><button class="btn btn-primary px-4">
+              + Add new instructor
+            </button></a
+          >
+        </div>
+
+        <!-- Stats -->
+        <div class="row mb-4">
+          <div class="col-md-3 col-6">
+            <div class="card-stat">
+              <p class="mb-1 small text-muted">Total active Trainer</p>
+              <h2 class="text-success fw-bold">8</h2>
+            </div>
+          </div>
+           <div class="col-md-3 col-6">
+            <label for="">Select Trainer</label>
+            <select name="" id="" class="form-control">
+              <option value="">--Select--</option>
+              <option value="">Devanshu</option>
+              <option value="">Vishwash</option>
+              <option value="">Hitesh</option>
+            </select>
+          </div>
+            <div class="col-md-6 col-6">
+            <label for="">Search Here..</label>
+            <input type="search" name="" id="" placeholder="Search.." class="form-control">
+          </div>
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-responsive shadow-sm bg-white rounded p-3">
+          <table class="table table-striped align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Name</th>
+                <th>Course Name</th>
+                <th>Mobile.No</th>
+                <th>EmailId</th>
+                <th>Password</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- Row 1 -->
+          
+              <tr>
+                <a href="">
+                  
+                </a>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <a href="./trainerinfo.html">
+                        <img
+                      src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80"
+                      width="45"
+                      height="45"
+                      class="rounded-circle me-2"
+                    />
+                    </a>
+                  
+                    <div>
+                      <strong>Devanshu</strong>
+                    </div>
+                  </div>
+                </td>
+
+                <td>Web Development</td>
+
+                <td>+922738927389</td>
+
+                <td>devanshuSharma@gmail.com</td>
+                <td>devanshu@12451426</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td>
+                  <i
+                    class="btn bi bi-pencil-square fs-4 text-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#popupformModal"
+                  ></i>
+                </td>
+              </tr>
+              <!-- Row 2 -->
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <a href="./trainerinfo.html">
+                        <img
+                      src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80"
+                      width="45"
+                      height="45"
+                      class="rounded-circle me-2"
+                    />
+                    </a>
+                    <div>
+                      <strong>Devanshu</strong>
+                    </div>
+                  </div>
+                </td>
+
+                <td>Web Development</td>
+
+                <td>+922738927389</td>
+
+                <td>devanshuSharma@gmail.com</td>
+                <td>devanshu@12451426</td>
+                 <td><span class="badge bg-success">Active</span></td>
+                <td>
+                  <i
+                    class="btn bi bi-pencil-square fs-4 text-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#popupformModal"
+                  ></i>
+                </td>
+              </tr>
+              <!-- Row 3 -->
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <a href="./trainerinfo.html">
+                        <img
+                      src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80"
+                      width="45"
+                      height="45"
+                      class="rounded-circle me-2"
+                    />
+                    </a>
+                    <div>
+                      <strong>Devanshu</strong>
+                    </div>
+                  </div>
+                </td>
+
+                <td>Web Development</td>
+
+                <td>+922738927389</td>
+
+                <td>devanshuSharma@gmail.com</td>
+                <td>devanshu@12451426</td>
+                 <td><span class="badge bg-danger">Deactivate</span></td>
+                <td>
+                  <i
+                    class="btn bi bi-pencil-square fs-4 text-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#popupformModal"
+                  ></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="popupform-section">
+        <!-- Popup Modal -->
+        <div
+          class="modal fade popupform-modal"
+          id="popupformModal"
+          tabindex="-1"
+          aria-labelledby="popupformLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow">
+              <div class="modal-header">
+                <h5 class="modal-title" id="popupformLabel">
+                  Add Trainer Details
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <div class="modal-body">
+                <form class="popupform-form">
+                  <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control popupform-name"
+                      placeholder="Enter full name"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Course Name</label>
+                    <input
+                      type="text"
+                      class="form-control popupform-course"
+                      placeholder="Enter course name"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Mobile Number</label>
+                    <input
+                      type="text"
+                      class="form-control popupform-mobile"
+                      placeholder="Enter mobile number"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Email ID</label>
+                    <input
+                      type="email"
+                      class="form-control popupform-email"
+                      placeholder="Enter email address"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input
+                      type="password"
+                      class="form-control popupform-password"
+                      placeholder="Enter password"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Status</label>
+                    <select class="form-select popupform-status">
+                      <option selected disabled>-- Select Status --</option>
+                      <option value="Active">Active</option>
+                      <option value="Deactive">Deactive</option>
+                    </select>
+                  </div>
+
+                  <div class="text-center mt-4">
+                    <button type="button" class="btn btn-save">
+                      <i class="fa-solid fa-save me-1"></i> Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+    
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+          <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-contacts">
+          <p>Business No: +91 7766967799</p>
+          <p>Email: hro@skillwaala.com</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ JS -->
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const toggleBtn = document.querySelector(".sidebar-toggle-btn");
+      const navLinks = document.querySelectorAll(".sidebar .nav-link");
+
+      // Sidebar toggle for desktop + mobile
+      toggleBtn.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          sidebar.classList.toggle("show");
+        } else {
+          sidebar.classList.toggle("collapsed");
+        }
+      });
+
+      // ✅ Auto set active link based on URL
+      const currentLocation = window.location.href;
+      navLinks.forEach((link) => {
+        if (link.href === currentLocation) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

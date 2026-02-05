@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Develeopment</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/webpage.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="180" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Courses</a>
+            </li>
+
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./hirepage.html">Hire From Us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.skillwaala.com/">Blog</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Job Search</a>
+            </li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <span class="badge bg-light text-dark mb-2"
+              >100% Free Training</span
+            >
+            <h1 class="mb-3">
+              Full-Stack Web Development Course (100% Free Training)
+            </h1>
+            <p class="mb-3">
+              Join Skillwaala’s Full Stack Development Course with certification
+              and gain expertise in frontend, backend, databases, APIs, and
+              deployment. Our web development training blends coding
+              fundamentals, real-world projects, and expert mentorship to help
+              you build a successful career.
+            </p>
+            <p class="mb-3">
+              ⭐ 4.9/5 &nbsp; | &nbsp; 150+ Success Stories &nbsp; | &nbsp; 50+
+              Modules
+            </p>
+            <a href="#"
+            data-bs-toggle="modal" data-bs-target="#lmsModal"
+            class="btn btn-light text-danger fw-bold"
+              >Enroll Now (Live)</a
+            >
+            <a href="./loginreg.html" class="btn btn-outline-light"
+              >Enroll Now (Recorded Course)</a
+            >
+          </div>
+          <!-- Right Image -->
+          <div class="col-lg-6 text-center">
+            <img
+              src="https://cdn.pwskills.com/assets/uploads/project_gallery/6568229050c24454fa73bab0.png"
+              class="img-fluid course-img"
+              alt="Digital Marketing"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Image -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img
+              src="https://www.cdmi.in/courses@2x/full-stack.webp"
+              class="img-fluid rounded shadow"
+              alt="Why Choose Skillwaala"
+            />
+          </div>
+          <!-- Right Content -->
+          <div class="col-lg-6">
+            <h2>Benefits of Free Full Stack Web Development Training</h2>
+            <p>
+              At Skillwaala, we believe quality education should be accessible
+              to everyone. Our full-stack developer course free training is
+              designed to give students and professionals a solid foundation in
+              coding, web technologies, and problem-solving without financial
+              barriers. This training introduces you to the core concepts of
+              front-end, back-end, and database management, giving you the
+              confidence to move forward in your web development journey.
+            </p>
+            <div class="mb-3">
+              <span class="feature-badge">Work on Real-world Projects</span>
+              <span class="feature-badge">100% Free Training</span>
+              <span class="feature-badge">Industry-Relevant Certification</span>
+              <span class="feature-badge">Placement Assistance</span>
+            </div>
+            <a href="./loginreg.html" class="btn btn-main">Enroll For Free</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="modules-section">
+      <div class="container">
+        <h2>Web Development Course Curriculum (MERN Stack)</h2>
+        <p>
+          Our full-stack web development course is designed to take you from the
+          basics to advanced development. The comprehensive course module helps
+          you master both frontend and backend technologies with practical
+          projects.
+        </p>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Left Side -->
+          <div class="col-lg-5 d-flex">
+            <div class="course-card w-100">
+              <img
+                src="https://www.w3webschool.com/wp-content/uploads/elementor/thumbs/full-stack-web-development-course-scaled-qscn9emrv8axq93ht6hhbhl6274v1tuf134jginr8k.jpg"
+                alt="Course Image"
+              />
+              <div class="course-card-body">
+                <h5>Full-Stack Web Development Program</h5>
+                <p class="mb-2">
+                  Go from beginner to pro with a complete roadmap covering HTML,
+                  CSS, JavaScript, React, Node.js, and backend integration.
+                </p>
+
+                <a href="#" class="btn-syllabus"
+                  >Download the Web development Course Syllabus</a
+                >
+                <a href="./loginreg.html" class="btn-enroll"
+                  >Enroll Now For Free</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side -->
+          <div class="col-lg-7 d-flex">
+            <div class="accordion-wrapper w-100">
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="fw-bold">Content Covered</h5>
+                <a href="#" class="text-danger fw-bold">Expand All</a>
+              </div>
+              <div class="accordion" id="courseModules">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="module1">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse1"
+                      aria-expanded="true"
+                    >
+                      <span class="module-icon"
+                        ><i class="bi bi-search"></i
+                      ></span>
+                      Module 1: Introduction to Web Development
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#courseModules"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          Understanding how the web works (Client-Server Model,
+                          HTTP/HTTPS)
+                        </li>
+                        <li>Server Side & Client Side.</li>
+                        <li>
+                          Web Development Roles (Front-End, Back-End,
+                          Full-Stack)
+                        </li>
+                        <li>
+                          Developer Tools & Environment Setup (VS Code, Git,
+                          Terminal, Node.js)
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="module2">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse2"
+                    >
+                      <span class="module-icon"
+                        ><i class="bi bi-search"></i
+                      ></span>
+                      Module 2: Frontend Development
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#courseModules"
+                  >
+                    <div class="accordion-body">
+                      <b>1. HTML & CSS (Building the UI)</b>
+                      <ul>
+                        <li>HTML Basics (Tags, Attributes, Forms, Tables)</li>
+                        <li>
+                          CSS Fundamentals (Selectors, CSS Properties, Box
+                          Model, Units, Colours, Fonts)
+                        </li>
+                        <li>
+                          Responsive Design (Media Queries, CSS Grid, Flexbox)
+                        </li>
+                        <li>CSS Frameworks (Bootstrap, Tailwind CSS, MUI)</li>
+                      </ul>
+
+                      <b>2. JavaScript & ES6+ </b>
+                      <ul>
+                        <li>
+                          Data Types, Variables, Operators, Loops, Functions,
+                          Conditional Statements
+                        </li>
+                        <li>Objects, Arrays, and JSON</li>
+                        <li>
+                          DOM Manipulation (Events, Selectors, Modifying
+                          Elements)
+                        </li>
+                        <li>
+                          Fetch API & Asynchronous JavaScript (Promises,
+                          Async/Await)
+                        </li>
+                        <li>Error Handling and Debugging</li>
+                        <li>
+                          ES6+ Features (Destructuring, Spread/Rest, Arrow
+                          Functions, Modules)
+                        </li>
+                      </ul>
+
+                      <b>3. React.js (Modern Front-End Framework) </b>
+                      <ul>
+                        <li>Introduction to React & JSX</li>
+                        <li>Functional Components vs Class Components</li>
+                        <li>
+                          State Management (useState, useEffect, useContext)
+                        </li>
+                        <li>Props and Prop Drilling</li>
+                        <li>React Router (Navigation & Dynamic Routing)</li>
+                        <li>API Integration with Axios & Fetch</li>
+                        <li>Context API & Redux for State Management</li>
+                        <li>UI Libraries (Material UI, Tailwind CSS)</li>
+                        <li>React Performance Optimization</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="module3">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse3"
+                    >
+                      <span class="module-icon"
+                        ><i class="bi bi-currency-dollar"></i
+                      ></span>
+                      Module 3: Backend Development
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#courseModules"
+                  >
+                    <div class="accordion-body">
+                      <b>1. Node.js & Express.js </b>
+                      <ul>
+                        <li>
+                          Introduction to Node.js (Event Loop, Async
+                          Programming)
+                        </li>
+                        <li>Express.js Basics (Middleware, Routing, CORS)</li>
+                        <li>Creating RESTful APIs</li>
+                        <li>Working with File System & Streams</li>
+                        <li>Handling Errors and Logging</li>
+                        <li>API Testing with Postman</li>
+                        <li>Authentication (JWT, bcrypt)</li>
+                        <li>NPM & Package Management</li>
+                        <li>MVC Architecture</li>
+                      </ul>
+
+                      <b>2. Databases & ORM </b>
+                      <ul>
+                        <li>SQL vs NoSQL</li>
+                        <li>
+                          MongoDB (CRUD Operations, Collections, Documents)
+                        </li>
+                        <li>Mongoose ORM (Schema, Models, Relationships)</li>
+                        <li>Connecting Database with Express</li>
+                      </ul>
+
+                      <b> 3. Authentication & Security</b>
+                      <ul>
+                        <li>User Authentication (JWT, OAuth, Sessions)</li>
+                        <li>
+                          Authorization & Role-Based Access Control (RBAC)
+                        </li>
+                        <li>Data Encryption (bcrypt, Crypto)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="module4">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse4"
+                    >
+                      <span class="module-icon"
+                        ><i class="bi bi-person-fill"></i
+                      ></span>
+                      Module 4: Full-Stack Development
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#courseModules"
+                  >
+                    <div class="accordion-body">
+                      <b> 1. Connecting Frontend & Backend</b>
+                      <ul>
+                        <li>RESTful APIs</li>
+                        <li>
+                          Fetching Data from the Backend (Axios, Fetch API)
+                        </li>
+                      </ul>
+
+                      <b>2. Deployment & DevOps</b>
+                      <ul>
+                        <li>Deploying Frontend (Vercel, Netlify)</li>
+                        <li>
+                          Deploying Backend (Render, Railway, AWS EC2,
+                          DigitalOcean)
+                        </li>
+                      </ul>
+
+                      <b>3. Version Control</b>
+                      <ul>
+                        <li>Git / GitHub</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="module5">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse5"
+                    >
+                      <span class="module-icon"
+                        ><i class="bi bi-envelope-at-fill"></i
+                      ></span>
+                      Module 5: Capstone Projects & Interview Prep
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse5"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#courseModules"
+                  >
+                    <div class="accordion-body">
+                      <b> 1. Real-World Projects</b>
+                      <ul>
+                        <li>
+                          Full-Stack Projects (E-commerce, Social Media App,
+                          Todo app, Chat App, etc.)
+                        </li>
+                        <li>Team Collaboration (GitHub)</li>
+                        <li>Best Practices (Code Reviews, Documentation)</li>
+                      </ul>
+
+                      <b>2. Resume Building & Job Readiness</b>
+                      <ul>
+                        <li>Writing a Developer Resume & Portfolio</li>
+                        <li>LinkedIn & GitHub Optimization</li>
+                        <li>System Design Basics</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="module6">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse6"
+                    >
+                      <span class="module-icon"
+                        ><i class="bi bi-bar-chart-line"></i
+                      ></span>
+                      Module 6: React Hooks
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse6"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#courseModules"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Caveat of JavaScript classes</li>
+                        <li>Functional components and React hooks</li>
+                        <li>What are React hooks?</li>
+                        <li>Basic hooks</li>
+                        <li>useState() hook</li>
+                        <li>
+                          How to write the useState() hook when the state
+                          variable is an array of objects?
+                        </li>
+                        <li>useEffect() hook</li>
+                        <li>Fetch API data using the useEffect() hook</li>
+                        <li>useContext() hook</li>
+                        <li>Rules to write React hooks</li>
+                        <li>Additional hooks</li>
+                        <li>Custom hooks</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="module7">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse7"
+                    >
+                      <span class="module-icon"
+                        ><i class="bi bi-bar-chart-line"></i
+                      ></span>
+                      Module 7: React Application Testing and Deployment
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse7"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#courseModules"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Define Jest</li>
+                        <li>Set up the testing environment</li>
+                        <li>Add Snapshot testing</li>
+                        <li>Integrate Test Reducers</li>
+                        <li>Create Test Components</li>
+                        <li>Push Application on Git</li>
+                        <li>Deploy App on Nginx</li>
+                        <li>Create Docker for a React Application</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights-section container">
+      <h2 class="fw-bold">
+        Highlights of Our Online Full Stack Development Training
+      </h2>
+      <p class="mb-5">
+        Skillwaala’s online full stack development course is designed to provide
+        flexibility for every learner. With structured modules and live
+        sessions, you can master the skills of a full-stack developer or a React
+        full-stack developer, all from the comfort of your home.
+      </p>
+
+      <div class="highlight-row">
+        <!-- Card 1 -->
+        <div class="highlight-card" style="flex: 3">
+          <img
+            src="https://img-c.udemycdn.com/course/750x422/1002676_3c6e_2.jpg"
+            alt=""
+          />
+          <div class="highlight-card-content">
+            <h5>100% Online Training</h5>
+            <p>
+              With our JavaScript full-stack developer course, you can learn
+              from anywhere with guided sessions and self-paced modules
+            </p>
+          </div>
+          <div class="vertical-text">Online Training</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="highlight-card">
+          <img
+            src="https://crampete-staticfiles.s3.ap-south-1.amazonaws.com/images/cramcourse/full-stack-web-development.png"
+            alt=""
+          />
+          <div class="highlight-card-content">
+            <h5>Hands-on Projects</h5>
+            <p>
+              We allow our learners to work on real projects where they build
+              real-world web apps, APIs, and deploy them on the cloud.
+            </p>
+          </div>
+          <div class="vertical-text">Real-World Projects</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="highlight-card">
+          <img
+            src="https://i0.wp.com/dusrasoft.com/wp-content/uploads/2024/05/E-Commerce-Development-Training.jpg"
+            alt=""
+          />
+          <div class="highlight-card-content">
+            <h5>Industry-Relevant Curriculum</h5>
+            <p>
+              Our curriculum covers everything, from frontend, backend, and
+              databases to deployment.
+            </p>
+          </div>
+          <div class="vertical-text">Curriculum</div>
+        </div>
+        <!-- Card 4 -->
+        <div class="highlight-card">
+          <img
+            src="https://marvel-b1-cdn.bc0a.com/f00000000100045/www.elmhurst.edu/wp-content/uploads/2019/11/software-developer-vs-software-engineer-illustration.jpg"
+            alt=""
+          />
+          <div class="highlight-card-content">
+            <h5>Career Support</h5>
+            <p>
+              Besides course curriculum and real-world projects, we also offer
+              resume building, interview guidance, and career mentoring.
+            </p>
+          </div>
+          <div class="vertical-text">Career Support</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Reg -->
+    <div class="container-fluid reg-section">
+      <div class="row align-items-center">
+        <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
+          <h2>Free Web Development Training Program</h2>
+          <p class="mb-3">
+            Start Your Career With a Full Stack Web Development Course
+          </p>
+          <a href="./loginreg.html"><button>Register Now</button></a>
+        </div>
+        <div class="col-md-5 text-center reg-image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoMyrwd0WTHi7QPYtsYrHhG9KVAH-wh_wizA&s"
+            alt="Digital Marketing"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Tabs -->
+    <div class="container tab-box">
+      <!-- Tabs -->
+      <ul
+        class="nav nav-pills justify-content-center mb-4"
+        id="pills-tab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="skills-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#skills"
+            type="button"
+            role="tab"
+          >
+            Skills Covered
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="tools-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#tools"
+            type="button"
+            role="tab"
+          >
+            Tools
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="apply-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#apply"
+            type="button"
+            role="tab"
+          >
+            Who Can Apply
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="path-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#path"
+            type="button"
+            role="tab"
+          >
+            Learning Path at Skillwaala
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- Skills Covered -->
+        <div class="tab-pane fade" id="skills" role="tabpanel">
+          <h4 class="fw-bold text-center mb-3">Skills Covered</h4>
+
+          <div class="row">
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>Html</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>Css</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>Bootstrap</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>JavaScript</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>React</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>TailwindCss</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>MUI</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>Redux</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>NodeJs</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>ExpressJs</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>MongoDB</p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="apply-card">
+                <p>Git/GitHub</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="tab-pane fade" id="tools" role="tabpanel">
+          <h4 class="fw-bold text-center mb-3">Tools You Will Learn</h4>
+          <ul>
+            <li>
+              <strong>Frontend Tools & Frameworks:</strong> HTML5, CSS3,
+              JavaScript, React.js, Bootstrap, Material UI
+            </li>
+            <li>
+              <strong>Backend Technologies:</strong> Node.js, Express.js, Java
+              (Spring Boot), (Django/Flask), REST APIs
+            </li>
+            <li>
+              <strong>Databases & Storage: </strong>MySQL, MongoDB, PostgreSQL,
+              Firebase
+            </li>
+            <li>
+              <strong> Version Control & Collaboration:</strong> Git, GitHub,
+              GitLab
+            </li>
+            <li>
+              <strong>Deployment & Cloud:</strong> AWS basics, Heroku, Netlify,
+              CI/CD pipelines
+            </li>
+            <li>
+              <strong>Code Editors & IDEs:</strong> VS Code, IntelliJ IDEA,
+              PyCharm, Eclipse
+            </li>
+            <li>
+              <strong>Testing & Debugging Tools:</strong> Postman, Chrome
+              DevTools, unit testing frameworks
+            </li>
+          </ul>
+        </div>
+
+        <!-- Who Can Apply -->
+        <div class="tab-pane fade show active" id="apply" role="tabpanel">
+          <h4 class="fw-bold text-center mb-2">
+            Who Can Apply for Web Development Training?
+          </h4>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="apply-card">
+                <i class="bi bi-person"></i>
+                <p>
+                  <strong>Students and Freshers:</strong> Individuals who are
+                  looking to build a career in software development.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="apply-card">
+                <i class="bi bi-briefcase"></i>
+                <p>
+                  <strong>Working Professionals:</strong> Employees who want to
+                  upskill with an advanced full-stack development course.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="apply-card">
+                <i class="bi bi-lightbulb"></i>
+                <p>
+                  <strong>Entrepreneurs & Freelancers:</strong> Learn to build
+                  complete web applications for your own projects or clients.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="apply-card">
+                <i class="bi bi-laptop"></i>
+                <p>
+                  <strong>Career Changers:</strong> Individuals who are planning
+                  to make a career switch from a non-technical background.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning Path -->
+        <div class="tab-pane fade" id="path" role="tabpanel">
+          <h4 class="fw-bold text-center mb-3">Learning Path at Skillwaala</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="apply-card">
+                <p>Foundation of Web Development</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="apply-card">
+                <p>Frontend Development</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="apply-card">
+                <p>Backend Development</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="apply-card">
+                <p>Deployment and Version Control</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="apply-card">
+                <p>Capstone Projects</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="apply-card">
+                <p>Career Guidance and Mentorship</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="experience-section">
+      <div class="container">
+        <!-- Heading -->
+        <div class="text-center mb-5">
+          <h2>Master Full Stack Development With Real-World Projects</h2>
+          <p class="lead">
+            Our full-stack web development course is designed to give you
+            practical, hands-on experience so you can confidently work on
+            real-world applications.
+          </p>
+        </div>
+
+        <div class="row align-items-center">
+          <!-- Left Side (Boxes) -->
+          <div class="col-lg-6">
+            <div class="info-box">
+              <h5>Build Live Web Applications</h5>
+              <p>
+                Develop fully functional web applications from scratch,
+                combining frontend, backend, and database integration. Learn to
+                structure code efficiently, implement user authentication, and
+                create interactive features, ensuring your projects are
+                industry-ready.
+              </p>
+            </div>
+            <div class="info-box">
+              <h5>Work With APIs & Third-party Services</h5>
+              <p>
+                Integrate REST APIs, third-party services, and external data
+                sources to make your applications dynamic and scalable. Gain
+                experience in real-world app functionality, like payment
+                gateways, social logins, and cloud services.
+              </p>
+            </div>
+            <div class="info-box">
+              <h5>Deploy & Maintain Projects</h5>
+              <p>
+                Learn how to deploy applications on cloud platforms such as AWS,
+                Netlify, and Heroku. Understand version control with Git, CI/CD
+                workflows, and maintenance strategies to keep your apps stable,
+                secure, and production-ready.
+              </p>
+            </div>
+            <div class="info-box">
+              <h5>Learn from Expert Mentors</h5>
+              <p>
+                Receive guidance from experienced developers who provide
+                insights on coding best practices, project optimization,
+                debugging, and solving real-world problems. Benefit from
+                mentorship that bridges the gap between learning and
+                professional software development.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Side (Image) -->
+          <div class="col-lg-6 text-center experience-image">
+            <img
+              src="https://www.smeclabs.net/wp-content/uploads/2022/08/MERN-1.png"
+              alt="Digital Marketing Experience"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container Jobs-program py-5">
+      <!-- Top Jobs Section -->
+      <div class="custom-box text-center">
+        <h4 class="fw-bold mb-2">
+          Top Jobs That Require Full Stack Development Skills
+        </h4>
+
+        <div class="row g-3 justify-content-center">
+          <div class="col-md-3 col-6">
+            <div class="job-card orange">
+              <i class="bi bi-bullseye"></i>
+              <div>
+                Full Stack Developer:
+                <span>₹4,00,000 to ₹12,00,000/year</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="job-card blue">
+              <i class="bi bi-graph-up"></i>
+              <div>
+                Frontend Developer:
+                <span>₹3,00,000 to ₹8,00,000/year </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="job-card green">
+              <i class="bi bi-people"></i>
+              <div>
+                Backend Developer
+                <span> ₹5,00,000 to ₹15,00,000/year</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="job-card red">
+              <i class="bi bi-file-earmark-text"></i>
+              <div>
+                Web Application Developer:
+                <span>₹4,00,000 to ₹12,00,000/year</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="job-card purple">
+              <i class="bi bi-currency-dollar"></i>
+              <div>
+                Software Engineer:
+                <span> ₹5,00,000 to ₹25,00,000/year</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="job-card pink">
+              <i class="bi bi-bar-chart-steps"></i>
+              <div>
+                API Integration Specialist:
+                <span> ₹4,00,000 to ₹11,00,000/year</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="job-card yellow">
+              <i class="bi bi-graph-up-arrow"></i>
+              <div>
+                DevOps Engineer (Entry-Level):
+                <span>₹5,00,000 to ₹12,00,000/year</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="job-card yellow">
+              <i class="bi bi-graph-up-arrow"></i>
+              <div>
+                Freelance Full Stack Developer:
+                <span> ₹25,000 to ₹1,50,000 per month (project-based)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flexible Learning Programs -->
+      <div class="text-center mb-5">
+        <h4 class="fw-bold">
+          Flexible Learning Programs Designed for Your Convenience
+        </h4>
+        <p class="text-muted">
+          Skillwaala’s full stack developer course is built to fit your
+          schedule, whether you are a student, working professional, or aspiring
+          freelancer. Our online-only approach ensures you can learn anytime,
+          anywhere, at your convenience.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4 col-12">
+          <div class="feature-box text-center">
+            <i class="bi bi-play-circle"></i>
+            <h6 class="fw-bold">Missed a Class?</h6>
+            <p class="text-muted">
+              Catch up anytime with recorded sessions available online. Learn at
+              your own speed without missing any critical content.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="feature-box text-center">
+            <i class="bi bi-calendar2-check"></i>
+            <h6 class="fw-bold">Maintain Work-Life Balance</h6>
+            <p class="text-muted">
+              Take a short break and join the next batch if needed. Maintain
+              your work-life balance while advancing your web development
+              skills.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="feature-box text-center">
+            <i class="bi bi-clock-history"></i>
+            <h6 class="fw-bold">Flexible Class Timings</h6>
+            <p class="text-muted">
+              Choose evening or weekend sessions to avoid clashes with your job
+              or personal schedule, ensuring uninterrupted learning.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="feature-box text-center">
+            <i class="bi bi-repeat"></i>
+            <h6 class="fw-bold">Unlimited Revision Access</h6>
+            <p class="text-muted">
+              Revisit lessons through class recordings and reinforce your
+              understanding of frontend, backend, and full-stack concepts.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="feature-box text-center">
+            <i class="bi bi-question-circle"></i>
+            <h6 class="fw-bold">Doubt Resolution</h6>
+            <p class="text-muted">
+              Our expert teaching assistants are available to resolve your
+              doubts or guide you through recorded sessions for extra clarity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="faq-section">
+      <div class="faq-box">
+        <h2 class="text-center mb-4">FAQ (Frequently Asked Questions)</h2>
+
+        <div class="accordion" id="faqAccordion">
+          <!-- Q1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+                aria-expanded="true"
+                aria-controls="collapse1"
+              >
+                Q1. What is the duration of Skillwaala’s Full Stack Developer
+                Course?
+              </button>
+            </h2>
+            <div
+              id="collapse1"
+              class="accordion-collapse collapse show"
+              aria-labelledby="faq1"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Ans. Our full stack developer course is designed to be completed
+                in 3 to 6 months, depending on your pace or chosen track.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+                aria-expanded="false"
+                aria-controls="collapse2"
+              >
+                Q2. Who can enroll in the Full Stack Web Development Course?
+              </button>
+            </h2>
+            <div
+              id="collapse2"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq2"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Ans. Students, fresh graduates, working professionals,
+                freelancers, and career changers can enroll in our course. Our
+                modules start from basics and dive into advanced strategies,
+                catering to both freshers and seasoned coders.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+                aria-expanded="false"
+                aria-controls="collapse3"
+              >
+                Q3. Can I learn at my own pace if I miss classes?
+              </button>
+            </h2>
+            <div
+              id="collapse3"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq3"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Ans. Yes, all sessions are recorded and available online, so you
+                can revisit the lessons anytime. The course is paced in a way to
+                offer convenience to our learners.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq4">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse4"
+                aria-expanded="false"
+                aria-controls="collapse4"
+              >
+                Q4. Will I receive a certificate after completing the course?
+              </button>
+            </h2>
+            <div
+              id="collapse4"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq4"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Ans. Yes. Completing the full-stack developer course grants you
+                a certificate from a reputed IT company in Jaipur - BR Softech.
+                This certificate validates your skills for job applications and
+                freelance opportunities.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq5">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse5"
+                aria-expanded="false"
+                aria-controls="collapse5"
+              >
+                Q5. What is the full stack developer course fee?
+              </button>
+            </h2>
+            <div
+              id="collapse5"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq5"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Ans. Skillwaala offers a completely free of cost course for
+                beginners and advanced learners. All our courses are completely
+                free with no hidden charges to help students get quality
+                education without any financial barriers.
+              </div>
+            </div>
+          </div>
+          <!-- Q6 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq6">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse6"
+                aria-expanded="false"
+                aria-controls="collapse6"
+              >
+                Q6. Do I need programming experience to join this course?
+              </button>
+            </h2>
+            <div
+              id="collapse6"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq6"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Ans. While the course is designed for beginners, a basic
+                understanding of programming and coding is preferred. The course
+                starts with foundational web development concepts and gradually
+                progresses to advanced full-stack development skills.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq7">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse7"
+                aria-expanded="false"
+                aria-controls="collapse7"
+              >
+                Q7. What tools and technologies will I learn in this course?
+              </button>
+            </h2>
+            <div
+              id="collapse7"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq7"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Ans. You will gain hands-on experience with HTML, CSS,
+                JavaScript, React.js, Node.js, Express.js, Spring Boot, SQL,
+                MongoDB, GitHub, CI/CD, AWS, and cloud deployment.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section">
+      <div class="container">
+        <h2>Student Success Stories</h2>
+        <p>
+          Hear from our successfull gradutes who landed their dream jobs
+          completing our course.
+        </p>
+
+        <!-- Cards -->
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <div class="video-wrapper">
+                <video controls autoplay muted>
+                  <source src="./media/Video-561.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <div class="video-wrapper">
+                <video controls autoplay muted>
+                  <source src="./media/Video-561.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <div class="video-wrapper">
+                <video controls autoplay muted>
+                  <source src="./media/Video-561.mp4" type="video/mp4" a />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <div class="video-wrapper">
+                <video controls autoplay muted>
+                  <source src="./media/Video-561.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-4">
+          <button class="cta-btn form-control">Check Out Testimonials</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Register Box Section -->
+            <section class="register-section">
+              <h2>Skillwaala Free Training Program</h2>
+              <p>Kickstart your Career with Skillwaala.</p>
+              <a href="./internship.html" class="btn">Register Now</a>
+            </section>
+          </div>
+        </div>
+        <div class="row g-4 footer-main">
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-12 footer-logo">
+            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+
+            <p class="m-2"></p>
+            <p><strong>Social Links:</strong></p>
+            <a href="https://www.facebook.com/skillwaala/"
+              ><i
+                class="bi bi-facebook bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.instagram.com/skillwaala"
+              ><i
+                class="bi bi-instagram bg-danger px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.linkedin.com/company/skillwaala/"
+              ><i
+                class="bi bi-linkedin bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a
+              href="https://api.whatsapp.com/send/?phone=917766967799&text=Hello+SkillWaala+Team&type=phone_number&app_absent"
+              ><i
+                class="bi bi-whatsapp bg-success px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+
+            <p><strong>Email:</strong>hro@skillwaala.com</p>
+            <p>
+              <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+              Scheme, Triveni Nagar Jaipur, 302018
+            </p>
+            <p><strong>Contact:</strong>+91 7766967799</p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/about-us">About Us</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/web-stories">Web Stories</a>
+              </li>
+              <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/privacy-policy"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+              </li>
+              <li><a href="https://www.skillwaala.com/gallery">Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-4 col-md-12 footer-column">
+            <h3>Trending Courses</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <ul>
+                  <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                  <li><a href="./contentwriting.html">Content Writing </a></li>
+                  <li><a href="./seo.html">SEO Course </a></li>
+                  <li>
+                    <a href="./socialmediamarketing.html"
+                      >Social Media Marketing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./webbatch.html">Full-Stack Web Development </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-6">
+                <ul>
+                  <li>
+                    <a href="./performancemarketing.html"
+                      >Performance Marketing
+                    </a>
+                  </li>
+                  <li><a href="./englishcourse.html">English Spoken </a></li>
+                  <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                  <li><a href="./videoediting.html">Video Editing </a></li>
+                  <li><a href="./2danimation.html">2D Animation </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Training Program</h3>
+            <ul>
+              <li><a href="./hirepage.html">Digital Marketing </a></li>
+              <li><a href="./hirepage.html">Content Writing </a></li>
+              <li><a href="./hirepage.html">Animation </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-contacts">
+        <p>Business No: +91 7766967799</p>
+        <p>Email: hro@skillwaala.com</p>
+      </div>
+    </footer>
+
+
+          <!-- Popup Modal -->
+  <div class="modal fade" id="lmsModal" tabindex="-1" aria-labelledby="lmsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100 text-center" id="lmsModalLabel">
+            <i class="bi bi-cone-striped text-warning me-2"></i>
+            Hold on tight!
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body">
+          <p>Our Live LMS is still under development! 🚀 <br>
+          Until it’s ready, message on our WhatsApp no. for details of our live classes.</p>
+
+          <div class="mt-3">
+            <label class="form-label fw-semibold">Whatsapp Number :- 917766967799</label>
+            <input type="text" id="communityLink" class="form-control text-primary" 
+              value="https://api.whatsapp.com/send/?phone=917766967799&text&type=phone_number&app_absent=0"
+              readonly onclick="window.open(this.value, '_blank')">
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer border-0 justify-content-center">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
