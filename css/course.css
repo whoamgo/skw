@@ -1,0 +1,320 @@
+body {
+  background: #fff7f2;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background: #fff;
+  padding: 10px 25px;
+  box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 18%);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+}
+
+.dropbtn {
+  background-color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  border-radius: 17px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #f26434;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.custom-nav {
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 2px 10px;
+  margin: 2px;
+}
+
+.custom-nav .nav-link {
+  font-weight: 500;
+  color: #333;
+  padding: 6px 12px;
+}
+
+.custom-nav .nav-link:hover {
+  color: #f26434;
+}
+
+.custom-nav .divider {
+  color: #f26434;
+  font-size: 20px;
+  margin: 0 6px;
+}
+
+.btn-login {
+  border: 1px solid #f36f45;
+  color: #f36f45;
+  border-radius: 10px;
+  padding: 6px 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-login:hover {
+  background: #f36f45;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .custom-nav {
+    border: none;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .custom-nav .divider {
+    display: none;
+  }
+
+  .custom-nav .nav-link {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .btn-login {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.hero {
+  background: linear-gradient(rgba(255, 115, 0, 0.8), rgba(255, 115, 0, 0.8)),
+    url("https://img.freepik.com/premium-photo/top-view-image-computer-laptop-putting-colorful-working-desk-surrounded-by-notebook-glasses-pen-flowers-marker-pens-pencil-orderly-workspace-concept_35674-2246.jpg?semt=ais_hybrid&w=740&q=80")
+      no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero h2 {
+  font-weight: 700;
+}
+
+.filter-btns .btn {
+  border-radius: 20px;
+  margin: 5px;
+}
+.filter-btns .btn.active {
+  background-color: #ff6900;
+  color: #fff;
+}
+
+.course-card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.course-card .btn {
+  background-color: #ff6900;
+  color: #fff;
+}
+.course-card .btn:hover {
+  background-color: #fff;
+  color: #ff6900;
+  border: 1px solid #ff6900;
+}
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.course-badge {
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.4s ease;
+}
+.card-img-wrapper:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.register-section {
+  background: linear-gradient(135deg, #5c2dab, #7d4ed1);
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 90%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.register-section h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.register-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.register-section .btn {
+  background: linear-gradient(90deg, #ff6600, #ff0000);
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.register-section .btn:hover {
+  opacity: 0.85;
+}
+
+footer {
+  background: linear-gradient(to bottom, #ffffff, #ffbbac);
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+footer .footer-main {
+  max-width: 90%;
+  margin: auto;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #444;
+}
+
+.footer-logo a {
+  color: #e65a29;
+  text-decoration: none;
+  margin: 0 4px;
+  font-size: 14px;
+}
+
+.footer-logo a:hover {
+  color: #ff5722;
+}
+
+.footer-column {
+  background: #ffe9e1;
+  border-radius: 15px;
+  padding: 25px 20px;
+  margin-right: 10px;
+}
+
+.footer-column h3 {
+  background: #f6d5c4;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.footer-column ul li {
+  margin: 8px 0;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.footer-column ul li a:hover {
+  color: #ff5722;
+}
+
+.footer-bottom {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.footer-contacts {
+  background: #ff5722;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 80px;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  text-align: center;
+}
+
+.footer-contacts p {
+  margin: 0;
+  text-align: center;
+}
